@@ -1,23 +1,30 @@
-const MobileNav = () => {
-  const toggleMenu = () => {
-    const $menu = document.querySelector(".menu-links")!;
-    const $icon = document.querySelector(".hamburger-icon")!;
-    $menu.classList.toggle("open");
-    $icon.classList.toggle("open");
+import * as Icons from "@heroicons/react/24/outline";
 
-    document.addEventListener("keydown", (e) => {
-      if (e.code === "Escape" && $menu.classList.contains("open")) {
-        $menu.classList.toggle("open");
-        $icon.classList.toggle("open");
-      }
-    });
-  };
+const MobileNav = () => {
+  // const toggleMenu = () => {
+  //   const $menu = document.querySelector(".menu-links")!;
+  //   const $icon = document.querySelector(".hamburger-icon")!;
+  //   $menu.classList.toggle("open");
+  //   $icon.classList.toggle("open");
+
+  //   document.addEventListener("keydown", (e) => {
+  //     if (e.code === "Escape" && $menu.classList.contains("open")) {
+  //       $menu.classList.toggle("open");
+  //       $icon.classList.toggle("open");
+  //     }
+  //   });
+  // };
 
   return (
-    <nav className="flex md:hidden items-center justify-around h-20 font-semibold fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg">
-      <p className="text-2xl cursor-default">Dev_August</p>
+    <nav className="flex justify-between items-center md:hidden h-20 fixed w-full z-20 bg-transparent backdrop-blur-[6px] shadow-lg pr-6">
+      <img
+        src="../../../public/augustine-high-resolution-logo-transparent.png"
+        alt=""
+        className="h-full"
+      />
+      <Icons.MoonIcon className="h-10" />
 
-      <div className="relative inline-block">
+      {/* <div className="relative inline-block">
         <div
           className="hamburger-icon flex flex-col justify-between h-6 w-8 cursor-pointer"
           onClick={toggleMenu}
@@ -56,7 +63,7 @@ const MobileNav = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };
