@@ -1,5 +1,6 @@
+import NavBar from "./components/navigation/NavBar";
 const App = () => {
-  return <h1>Augustine Edeh</h1>;
+  return <NavBar />;
 };
 
 export default App;
