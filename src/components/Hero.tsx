@@ -1,8 +1,8 @@
 const Hero = () => {
   return (
-    <div className="flex flex-col h-screen items-center bg-slate-900">
-      <section className="text-white">
-        <h3>Hi there, 👋</h3>
+    <div className="flex flex-col h-screen place-content-center bg-slate-900">
+      <section className="text-white text-center">
+        <h3>Hi there 👋,</h3>
         <div>
           <p>I'm Augustine Edeh,</p>
           <p>
@@ -11,15 +11,15 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="">
-        <div className="p-0 container h-fit w-56 bg-red-500">
+      <section className="flex place-content-center h-56 bg-blue-40 mt-20">
+        <div className="container h-full w-56 bg-yellow-500 rounded-lg overflow-clip z-10 shadow-lg">
           <img
             src={"https://xsgames.co/randomusers/assets/avatars/male/74.jpg"}
             alt="Augustine"
-            className="p-0 h"
+            className="h"
           />
         </div>
-        <div className="w-56 bg-slate-600"></div>
+        <div className="h-full w-56 h bg-slate-800 rounded-lg -ml-44 mt-8"></div>
       </section>
     </div>
   );
