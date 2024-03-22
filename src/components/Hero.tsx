@@ -1,3 +1,5 @@
+import profileImg from "../assets/images/1672767018205-removebg-preview.png";
+
 const Hero = () => {
   return (
     <div className="min-h-screen flex flex-col gap-20 lg:flex-row  justify-center items-center bg-slate-900">
@@ -15,9 +17,10 @@ const Hero = () => {
       </section>
 
       <section className="flex place-content-center h-56 bg-blue-40">
-        <div className="container h-full w-56 bg-yellow-500 rounded-lg overflow-clip z-10 shadow-lg">
+        <div className="container h-full w-56 bg-black rounded-lg overflow-clip z-10 shadow-lg">
           <img
-            src={"https://xsgames.co/randomusers/assets/avatars/male/74.jpg"}
+            // src={"https://xsgames.co/randomusers/assets/avatars/male/74.jpg"}
+            src={profileImg}
             alt="Augustine"
             className="h"
           />
