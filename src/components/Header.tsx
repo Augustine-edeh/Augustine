@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <header className="shadow-xl">
-      <nav className="flex justify-between bg-blue-900 p-3">
+    <header className="fixed w-full shadow-xl text-white">
+      <nav className="flex justify-between bg-slate-800 p-3">
         <div>{"</>"} Augustine</div>
         <ul className="flex gap-3">
           <li>
