@@ -1,4 +1,7 @@
-import profileImg from "../assets/images/1672767018205-removebg-preview.png";
+import profileImg from "../assets/images/profileImg.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (
@@ -15,6 +18,26 @@ const Hero = () => {
             & <span className="text-teal-500">a fullstack developer</span> in
             the making (self tught)
           </p>
+        </div>
+
+        <div className="flex mx-auto gap-x-5 bg-red-300 w-fit">
+          <button
+            type="button"
+            className="outline outline-1 rounded-3xl px-2 py-2"
+          >
+            Download CV
+          </button>
+          <button
+            type="button"
+            className="outline outline-1 bg-slate-700 rounded-3xl px-3 py-2"
+          >
+            Contact me
+          </button>
+        </div>
+
+        <div>
+          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faLinkedin} />
         </div>
       </section>
 
