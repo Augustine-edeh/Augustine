@@ -1,7 +1,8 @@
 import profileImg from "../assets/images/profileImg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faColonSign } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
   return (
@@ -36,12 +37,23 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center gap-x-5">
-          <div className="bg-black rounded-full overflow-hidden">
-            <FontAwesomeIcon icon={faGithub} size="2xl" className="h-16" />
-          </div>
-          <div className="bg-blue-600 rounded-full overflow-hidden">
-            <FontAwesomeIcon icon={faLinkedin} size="2xl" className="h-16" />
-          </div>
+          <button
+            type="button"
+            className="grid place-items-center bg-slate-700 rounded-full h-12 w-12"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              size="2xl"
+              className="h-8 text-white"
+            />
+          </button>
+          <button type="button" className="bg-slate-700 rounded-full h-12 w-12">
+            <FontAwesomeIcon
+              icon={faGithub}
+              size="2xl"
+              className="h-full w-full text-white"
+            />
+          </button>
         </div>
       </section>
 
