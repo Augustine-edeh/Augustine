@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex mx-auto gap-x-5 bg-red-300 w-fit">
+        <div className="flex mx-auto gap-x-5 w-fit my-10">
           <button
             type="button"
             className="outline outline-1 rounded-3xl px-2 py-2"
@@ -29,15 +29,19 @@ const Hero = () => {
           </button>
           <button
             type="button"
-            className="outline outline-1 bg-slate-700 rounded-3xl px-3 py-2"
+            className="bg-slate-700 rounded-3xl px-3 py-3.5"
           >
             Contact me
           </button>
         </div>
 
-        <div>
-          <FontAwesomeIcon icon={faGithub} />
-          <FontAwesomeIcon icon={faLinkedin} />
+        <div className="flex justify-center gap-x-5">
+          <div className="bg-black rounded-full overflow-hidden">
+            <FontAwesomeIcon icon={faGithub} size="2xl" className="h-16" />
+          </div>
+          <div className="bg-blue-600 rounded-full overflow-hidden">
+            <FontAwesomeIcon icon={faLinkedin} size="2xl" className="h-16" />
+          </div>
         </div>
       </section>
 
