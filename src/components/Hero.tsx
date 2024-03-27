@@ -36,23 +36,26 @@ const Hero = () => {
         </div>
 
         <div className="flex mx-auto gap-x-5 w-fit my-10">
-          <button
-            type="button"
-            className="outline outline-1 rounded-3xl px-2 py-2"
+          <a
+            href=""
+            className="grid place-items-center outline outline-1 rounded-3xl px-2 py-2"
+            download
           >
             Download CV
-          </button>
-          <button
-            type="button"
-            className="bg-slate-700 rounded-3xl px-3 py-3.5"
+          </a>
+
+          <a
+            href="#contact"
+            className="bg-slate-700 rounded-3xl px-3 py-3.5 shadow-xl"
           >
             Contact me
-          </button>
+          </a>
         </div>
 
         <div className="flex justify-center gap-x-5">
-          <button
-            type="button"
+          <a
+            href="https://www.linkedin.com/in/augustine-edeh/"
+            target="_blank"
             className="grid place-items-center bg-slate-700 rounded-full h-12 w-12"
           >
             <FontAwesomeIcon
@@ -60,14 +63,18 @@ const Hero = () => {
               size="2xl"
               className="h-8 text-white"
             />
-          </button>
-          <button type="button" className="bg-slate-700 rounded-full h-12 w-12">
+          </a>
+          <a
+            href="https://github.com/Augustine-edeh"
+            target="_blank"
+            className="bg-slate-700 rounded-full h-12 w-12"
+          >
             <FontAwesomeIcon
               icon={faGithub}
               size="2xl"
               className="h-full w-full text-white"
             />
-          </button>
+          </a>
         </div>
       </section>
     </div>
