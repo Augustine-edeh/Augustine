@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import BottomNavigation from "./BottomNavigation";
 import NavBar from "./components/navigation/NavBar";
 import BottomNav from "./components/navigation/BottomNav";
+import Contact from "./components/Contact";
 BottomNav;
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Hero />
       <BottomNav />
+      <Contact />
     </main>
   );
 };
