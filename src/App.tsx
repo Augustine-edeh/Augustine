@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 BottomNav;
 const App = () => {
   return (
-    <main>
+    <main className="bg-slate-900">
       <Header />
       <Hero />
       <BottomNav />
