@@ -45,7 +45,7 @@ const Contact = () => {
       >
         <div className="flex flex-col gap-y-2">
           <label htmlFor="name" className="font-bold w-fit">
-            Name
+            Your Name
           </label>
           <input
             type="text"
@@ -53,7 +53,7 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Your name"
+            placeholder="What's your name"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4  border-slate-800 focus:border-blue-500 shadow-lg"
             required
           />
