@@ -32,12 +32,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen max-w-screen-md px-8 mx-auto text-white">
-      <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-        Get in Touch
+    <section className="min-h-screen max-w-screen-md px-8 mx-auto text-white pt-20">
+      <p className="font-bold text-gray-400">Get in Touch</p>
+
+      <h2 className="text-3xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100">
+        Contact.
       </h2>
 
-      <p>Drop me a line...</p>
+      <p className="text-gray-400">drop me a line...</p>
 
       <form
         onSubmit={handleSubmit}
@@ -53,14 +55,14 @@ const Contact = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="What's your name"
+            placeholder="What's your name?"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4  border-slate-800 focus:border-blue-500 shadow-lg"
             required
           />
         </div>
         <div className="flex flex-col gap-y-2">
           <label htmlFor="email" className="font-bold w-fit">
-            Email Address
+            Your Email
           </label>
           <input
             type="text"
@@ -76,7 +78,7 @@ const Contact = () => {
 
         <div className="flex flex-col gap-y-2">
           <label htmlFor="message" className="font-bold w-fit">
-            Message
+            Your Message
           </label>
           <textarea
             id="message"
@@ -85,7 +87,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Message"
+            placeholder="Kindly enter your message"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
             required
           ></textarea>
