@@ -2,13 +2,55 @@ import profileImg from "../assets/images/profileImg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     // FIXME: height should = screen - 20 tailwind units
     // FIXME: 20 units is from h-20 on header component
-    <div className="min-h-[calc(100vh-5rem)] flex flex-col gap-20 lg:flex-row  justify-center items-center bg-slate-900">
-      <section className="flex h-56">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={containerVariants}
+      transition={{ duration: 0.6 }}
+      className="min-h-[calc(100vh-5rem)] flex flex-col gap-20 lg:flex-row  justify-center items-center bg-slate-900"
+    >
+      <motion.section
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+          hidden: { opacity: 0, x: -120 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        transition={{
+          // delay: 0.5,
+          duration: 0.6,
+        }}
+        className="flex h-56"
+      >
         <div className="container h-full w-56 bg-black rounded-lg overflow-clip z-10 shadow-2xl">
           <img
             // src={"https://xsgames.co/randomusers/assets/avatars/male/74.jpg"}
@@ -18,7 +60,7 @@ const Hero = () => {
           />
         </div>
         <div className="h-full w-56 h bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl"></div>
-      </section>
+      </motion.section>
 
       <section className="text-white text-center">
         <h3 className="text-2xl">Hello, I'm</h3>
@@ -77,7 +119,7 @@ const Hero = () => {
           </a>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
