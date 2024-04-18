@@ -12,9 +12,9 @@ const App = () => {
     <main className="bg-slate-900">
       <Header />
       <Hero />
-      <BottomNav />
-      <Contact />
       <About />
+      <Contact />
+      <BottomNav />
     </main>
   );
 };
