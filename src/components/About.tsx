@@ -96,7 +96,7 @@ const About = () => {
           <motion.h2
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-3xl font-bold text-gray-200 mb-6 mt-5"
+            className="text-3xl font-bold text-gray-200 mb-6 mt-5 underline underline-offset-8 decoration-blue-500"
           >
             About Me.
           </motion.h2>
