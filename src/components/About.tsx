@@ -50,7 +50,7 @@ const About = () => {
     },
     {
       toolName: "Nodejs",
-      icon: "",
+      icon: "../../public/nodeJS.png",
       alt: "Nodejs",
     },
     {
@@ -65,17 +65,17 @@ const About = () => {
     },
     {
       toolName: "Typescript",
-      icon: "",
+      icon: "../../public/typescript.png",
       alt: "Typescript",
     },
     {
       toolName: "HTML",
-      icon: "",
+      icon: "../../public/html.png",
       alt: "HTML",
     },
     {
       toolName: "CSS",
-      icon: "",
+      icon: "../../public/css.png",
       alt: "CSS",
     },
   ];
@@ -149,14 +149,16 @@ const About = () => {
           <ul className="flex flex-wrap gap-2 text-white">
             {tools &&
               tools.map((tool) => (
-                <li className="flex w-fit p-3 gap-4 rounded-lg bg-slate-800 mb-1">
+                <li className="flex  items-center w-fit p-3 gap-2 rounded-lg bg-slate-800 mb-1">
                   <motion.img
                     // variants={headerVariants}
                     // transition={{ duration: 0.6, delay: 0.5 }}
                     // className="text-lg text-gray-300 mb-8"
+                    // src={tool.icon}
                     src={tool.icon}
-                    alt=""
+                    alt="."
                     key={Math.random()}
+                    className="h-6"
                   />
 
                   <span>{tool.toolName}</span>
