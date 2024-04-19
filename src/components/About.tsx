@@ -112,7 +112,7 @@ const About = () => {
               and aviation, finding inspiration from the innovation and
               precision in this field.
             </p> */}
-            <p>
+            <div className="flex flex-col gap-3 sm:text-justify">
               <p>
                 Hi there! I'm Augustine Edeh, a frontend developer with a
                 passion for crafting captivating digital experiences and a love
@@ -135,21 +135,21 @@ const About = () => {
                 extraordinary digital experiences. Let's soar to new heights
                 together!
               </p>
-            </p>
+            </div>
           </motion.p>
         </div>
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto">
           <motion.h2
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-2xl font-bold text-gray-200 mb-6"
+            className="text-xl font-bold text-gray-200 mb-6"
           >
-            Tools & technologies I use:
+            Some of the tools & technologies I use:
           </motion.h2>
-          <ul className="grid grid-cols-3 text-white">
+          <ul className="flex flex-wrap gap-2 text-white">
             {tools &&
               tools.map((tool) => (
-                <li className="flex p-3 gap-4 rounded-lg bg-slate-800 mb-2">
+                <li className="flex w-fit p-3 gap-4 rounded-lg bg-slate-800 mb-1">
                   <motion.img
                     // variants={headerVariants}
                     // transition={{ duration: 0.6, delay: 0.5 }}
@@ -158,14 +158,13 @@ const About = () => {
                     alt=""
                     key={Math.random()}
                   />
-                  altern
+
                   <span>{tool.toolName}</span>
                 </li>
               ))}
           </ul>
         </div>
       </motion.div>
-      {/* <div>My tools:</div> */}
     </div>
   );
   // const first = (second) => {
