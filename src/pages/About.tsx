@@ -159,12 +159,13 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-xl font-bold text-gray-200 mb-6"
           >
-            Some of the tools & technologies I use:
+            {/* Some of the tools & technologies I use: */}
+            Skills:
           </motion.h2>
           <ul className="grid grid-cols-3 md:flex md:flex-wrap gap-3 text-white">
             {tools &&
               tools.map((tool) => (
-                <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 p-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-700">
+                <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 p-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50">
                   <motion.img
                     // variants={headerVariants}
                     // transition={{ duration: 0.6, delay: 0.5 }}
