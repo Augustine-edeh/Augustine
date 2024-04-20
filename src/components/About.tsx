@@ -24,14 +24,29 @@ const About = () => {
 
   const tools = [
     {
-      toolName: "TailwindCSS",
-      icon: "",
-      alt: "Tailwind",
+      toolName: "HTML",
+      icon: "../../public/html.png",
+      alt: "HTML",
     },
     {
-      toolName: "Vite",
-      icon: "",
-      alt: "Vite",
+      toolName: "CSS",
+      icon: "../../public/css.png",
+      alt: "CSS",
+    },
+    {
+      toolName: "JavaScript",
+      icon: "../../public/js.png",
+      alt: "javascript",
+    },
+    {
+      toolName: "git",
+      icon: "../../public/git.png",
+      alt: "git",
+    },
+    {
+      toolName: "gitHub",
+      icon: "../../public/github (1).png",
+      alt: "gitHub",
     },
     {
       toolName: "ReactJS",
@@ -49,6 +64,21 @@ const About = () => {
       alt: "Vercel",
     },
     {
+      toolName: "TailwindCSS",
+      icon: "",
+      alt: "Tailwind",
+    },
+    {
+      toolName: "Vite",
+      icon: "",
+      alt: "Vite",
+    },
+    {
+      toolName: "Typescript",
+      icon: "../../public/typescript.png",
+      alt: "Typescript",
+    },
+    {
       toolName: "Nodejs",
       icon: "../../public/nodeJS.png",
       alt: "Nodejs",
@@ -62,21 +92,6 @@ const About = () => {
       toolName: "MongoDB",
       icon: "",
       alt: "MongoDB",
-    },
-    {
-      toolName: "Typescript",
-      icon: "../../public/typescript.png",
-      alt: "Typescript",
-    },
-    {
-      toolName: "HTML",
-      icon: "../../public/html.png",
-      alt: "HTML",
-    },
-    {
-      toolName: "CSS",
-      icon: "../../public/css.png",
-      alt: "CSS",
     },
   ];
 
