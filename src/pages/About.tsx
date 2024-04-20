@@ -161,10 +161,10 @@ const About = () => {
           >
             Some of the tools & technologies I use:
           </motion.h2>
-          <ul className="flex flex-wrap gap-2 text-white">
+          <ul className="grid grid-cols-3 md:flex md:flex-wrap gap-3 text-white">
             {tools &&
               tools.map((tool) => (
-                <li className="flex  items-center w-fit p-3 gap-2 rounded-lg bg-slate-800 mb-1">
+                <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 p-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-700">
                   <motion.img
                     // variants={headerVariants}
                     // transition={{ duration: 0.6, delay: 0.5 }}
