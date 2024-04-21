@@ -53,12 +53,7 @@ const Hero = () => {
         className="flex h-56"
       >
         <div className="container h-full w-56 bg-black rounded-lg overflow-clip z-10 shadow-2xl">
-          <img
-            // src={"https://xsgames.co/randomusers/assets/avatars/male/74.jpg"}
-            src={profileImg}
-            alt="Augustine"
-            className="h"
-          />
+          <img src={profileImg} alt="Augustine" className="h" />
         </div>
         <div className="h-full w-56 h bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl"></div>
       </motion.section>
