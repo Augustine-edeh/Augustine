@@ -8,11 +8,11 @@ const Header = () => {
       <div className="flex place-items-center gap-x-5">
         <nav className="hidden md:flex justify-between">
           <ul className="flex gap-3">
-            <li>
+            {/* <li>
               <Link to="/" spy={true} smooth={true} offset={50} duration={500}>
                 Home
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 to="about"

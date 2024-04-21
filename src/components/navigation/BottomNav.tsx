@@ -6,10 +6,10 @@ const BottomNav = () => {
     <nav className="fixed md:hidden bottom-5 right-0 left-0 bg-slate-800 backdrop-blur-[6px] shadow-xl rounded-full w-[90dvw] mx-auto text-white">
       <ul className="flex justify-evenly py-2">
         <Link
-          to="/"
+          to="about"
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={50}
           duration={500}
           className="grid place-items-center"
         >
@@ -20,7 +20,7 @@ const BottomNav = () => {
           to="projects"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={50}
           duration={500}
           className="grid place-items-center"
         >
@@ -31,7 +31,7 @@ const BottomNav = () => {
           to="contact"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={50}
           duration={500}
           className="grid place-items-center"
         >
