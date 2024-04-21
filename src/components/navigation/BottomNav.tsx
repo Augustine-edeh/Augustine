@@ -5,7 +5,7 @@ const BottomNav = () => {
   return (
     <nav className="fixed md:hidden bottom-5 right-0 left-0 bg-slate-800 backdrop-blur-[6px] shadow-xl rounded-full w-[90dvw] mx-auto text-white">
       <ul className="flex justify-evenly py-2">
-        <li className="nav-item">
+        <li className="bottom-nav">
           <Link
             to="about"
             spy={true}
@@ -18,7 +18,7 @@ const BottomNav = () => {
             <label htmlFor="about">About</label>
           </Link>
         </li>
-        <li className="nav-item ">
+        <li className="bottom-nav ">
           <Link
             to="projects"
             spy={true}
@@ -31,7 +31,7 @@ const BottomNav = () => {
             <label htmlFor="projects">Projects</label>
           </Link>
         </li>
-        <li className="nav-item">
+        <li className="bottom-nav">
           <Link
             to="contact"
             spy={true}

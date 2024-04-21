@@ -76,11 +76,11 @@ button:focus-visible {
   /* line-height: 1.5; */
 }
 
-.nav-item .active {
+.bottom-nav .active {
   color: #ffffff;
   font-weight: 900;
 }
-
+/*  */
 .header-nav .active {
   font-weight: 900;
   padding-bottom: 50%;

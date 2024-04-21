@@ -1,8 +1,5 @@
 import Header from "./components/Header";
 import Hero from "./pages/Hero";
-// import BottomNav from "./components/navigation/BottomNav";
-import BottomNavigation from "./BottomNavigation";
-import NavBar from "./components/navigation/NavBar";
 import BottomNav from "./components/navigation/BottomNav";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
