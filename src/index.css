@@ -75,3 +75,8 @@ button:focus-visible {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5; */
 }
+
+.nav-item .active {
+  color: #ffffff;
+  font-weight: 900;
+}
