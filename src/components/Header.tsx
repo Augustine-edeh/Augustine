@@ -3,7 +3,16 @@ import { Link } from "react-scroll";
 const Header = () => {
   return (
     <header className="flex justify-center items-center gap-x-20 bg-slate-800 shadow-xl text-white h-20">
-      <p className="text-blue-300 h-fit text-2xl">{"</> Augustine"}</p>
+      <Link
+        to="/"
+        spy={true}
+        smooth={false}
+        offset={-80}
+        duration={500}
+        className="text-blue-300 h-fit text-2xl"
+      >
+        {"</> Augustine"}
+      </Link>
 
       <div className="flex place-items-center gap-x-5">
         <nav className="hidden md:flex justify-between">
