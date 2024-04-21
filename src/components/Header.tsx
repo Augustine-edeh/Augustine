@@ -2,7 +2,7 @@ import * as Icons from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 const Header = () => {
   return (
-    <header className="fixed w-full flex  justify-center gap-x-20 bg-slate-800 shadow-xl shadow-blue-600/30 text-white h-20">
+    <header className="fixed w-full flex  justify-center gap-x-20 bg-slate-800 shadow-xl shadow-blue-600/30 text-white h-20 z-50">
       <div className="flex justify-between items-center gap-x-20 w-full max-w-screen-lg px-10">
         <Link
           to="/"
