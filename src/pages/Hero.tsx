@@ -30,6 +30,7 @@ const Hero = () => {
     // FIXME: height should = screen - 20 tailwind units
     // FIXME: 20 units is from h-20 on header component
     <motion.div
+      id="/"
       ref={ref}
       initial="hidden"
       animate={controls}

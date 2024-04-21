@@ -1,5 +1,5 @@
 import * as Icons from "@heroicons/react/24/outline";
-
+import { Link } from "react-scroll";
 const Header = () => {
   return (
     <header className="flex justify-center items-center gap-x-20 bg-slate-800 shadow-xl text-white h-20">
@@ -9,16 +9,42 @@ const Header = () => {
         <nav className="hidden md:flex justify-between">
           <ul className="flex gap-3">
             <li>
-              <a href="">Home</a>
+              <Link to="/" spy={true} smooth={true} offset={50} duration={500}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="">About</a>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="">Project</a>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Projects
+              </Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>

@@ -96,7 +96,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen py-16 px-8 lg:px-32 bg-slate-900">
+    <div id="about" className="min-h-screen py-16 px-8 lg:px-32 bg-slate-900">
       <motion.div
         ref={ref}
         initial="hidden"
