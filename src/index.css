@@ -80,3 +80,9 @@ button:focus-visible {
   color: #ffffff;
   font-weight: 900;
 }
+
+.header-nav .active {
+  font-weight: 900;
+  padding-bottom: 50%;
+  border-bottom: 2px #0066ff solid;
+}
