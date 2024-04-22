@@ -50,7 +50,7 @@ const Hero = () => {
           // delay: 0.5,
           duration: 0.6,
         }}
-        className="flex h-56"
+        className="flex h-56 z-0"
       >
         <div className="container h-full w-56 bg-black rounded-lg overflow-clip z-10 shadow-2xl">
           <img src={profileImg} alt="Augustine" className="h" />
