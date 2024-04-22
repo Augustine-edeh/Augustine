@@ -5,7 +5,7 @@ import Headeroom from "react-headroom";
 const Header = () => {
   return (
     <Headeroom>
-      <header className="w-full flex  justify-center gap-x-20 bg-slate-800 shadow-xl shadow-blue-600/30 text-white h-20 z-50">
+      <header className="w-full flex  justify-center gap-x-20 bg-slate-800 shadow-xl shadow-blue-600/30 text-white h-20 z-50 px-10">
         <div className="flex justify-between items-center gap-x-20 w-full max-w-screen-lg px-10">
           <Link
             to="/"
