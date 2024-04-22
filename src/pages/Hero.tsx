@@ -21,10 +21,10 @@ const Hero = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  const headerVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+  // const headerVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: { opacity: 1 },
+  // };
 
   return (
     // FIXME: height should = screen - 20 tailwind units

@@ -1,36 +1,4 @@
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
-
 const Projects = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    console.log(e.target);
-
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can implement the functionality to send the form data
-    console.log(formData);
-    // Clear form after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-
   return (
     <section
       id="projects"
