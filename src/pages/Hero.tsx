@@ -36,7 +36,7 @@ const Hero = () => {
       animate={controls}
       variants={containerVariants}
       transition={{ duration: 0.6 }}
-      className="min-h-[calc(100vh-5rem)] flex flex-col gap-20 lg:flex-row  justify-center items-center bg-slate-900"
+      className="min-h-screen flex flex-col gap-20 lg:flex-row justify-center items-center bg-slate-900 max-w-screen-lg mx-auto px-8"
     >
       <motion.section
         ref={ref}
