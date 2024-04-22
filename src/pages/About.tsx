@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Icon } from "@iconify/react";
 
 const About = () => {
   const controls = useAnimation();
@@ -25,72 +26,72 @@ const About = () => {
   const tools = [
     {
       toolName: "HTML",
-      icon: "../../public/html.png",
+      icon: "vscode-icons:file-type-html",
       alt: "HTML",
     },
     {
       toolName: "CSS",
-      icon: "../../public/css.png",
+      icon: "vscode-icons:file-type-css",
       alt: "CSS",
     },
     {
       toolName: "JavaScript",
-      icon: "../../public/js.png",
+      icon: "vscode-icons:file-type-js-official",
       alt: "javascript",
     },
     {
       toolName: "git",
-      icon: "../../public/git.png",
+      icon: "vscode-icons:file-type-git",
       alt: "git",
     },
     {
       toolName: "gitHub",
-      icon: "../../public/github (1).png",
+      icon: "cib:github",
       alt: "gitHub",
     },
     {
       toolName: "ReactJS",
-      icon: "",
+      icon: "vscode-icons:file-type-reactjs",
       alt: "ReactJS",
     },
     {
       toolName: "Netlify",
-      icon: "",
+      icon: "vscode-icons:file-type-light-netlify",
       alt: "Netlify",
     },
     {
       toolName: "Vercel",
-      icon: "",
+      icon: "vscode-icons:file-type-vercel",
       alt: "Vercel",
     },
     {
       toolName: "TailwindCSS",
-      icon: "",
+      icon: "vscode-icons:file-type-tailwind",
       alt: "Tailwind",
     },
     {
       toolName: "Vite",
-      icon: "",
+      icon: "vscode-icons:file-type-vite",
       alt: "Vite",
     },
     {
       toolName: "Typescript",
-      icon: "../../public/typescript.png",
+      icon: "devicon:typescript",
       alt: "Typescript",
     },
     {
       toolName: "Nodejs",
-      icon: "../../public/nodeJS.png",
+      icon: "devicon:nodejs",
       alt: "Nodejs",
     },
     {
       toolName: "Express",
-      icon: "",
+      icon: "skill-icons:expressjs-light",
       alt: "Express",
     },
     {
       toolName: "MongoDB",
-      icon: "",
+      icon: "skill-icons:mongodb",
       alt: "MongoDB",
     },
   ];
@@ -166,7 +167,7 @@ const About = () => {
             {tools &&
               tools.map((tool) => (
                 <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50">
-                  <motion.img
+                  {/* <motion.img
                     // variants={headerVariants}
                     // transition={{ duration: 0.6, delay: 0.5 }}
                     // className="text-lg text-gray-300 mb-8"
@@ -175,8 +176,8 @@ const About = () => {
                     alt="."
                     key={Math.random()}
                     className="h-6"
-                  />
-
+                  /> */}
+                  <Icon icon={tool.icon} width="32" height="32" />
                   <span>{tool.toolName}</span>
                 </li>
               ))}
