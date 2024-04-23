@@ -76,13 +76,19 @@ button:focus-visible {
   /* line-height: 1.5; */
 }
 
-.bottom-nav .active {
-  color: #ffffff;
-  font-weight: 900;
-}
-/*  */
-.header-nav .active {
-  font-weight: 900;
-  padding-bottom: 50%;
-  border-bottom: 2px #0066ff solid;
+@layer components {
+  /* bottomNav active state */
+  .bottom-nav .active {
+    @apply font-bold;
+  }
+
+  /* bottomNav active state for icons */
+  .bottom-nav .active .icons {
+    @apply bg-blue-800 bg-opacity-50 px-3 py-0.5 rounded-s-2xl rounded-e-2xl;
+  }
+
+  /* headerNav active state */
+  .header-nav .active {
+    @apply font-bold pb-[50%] border-b-2 border-[#0066ff];
+  }
 }

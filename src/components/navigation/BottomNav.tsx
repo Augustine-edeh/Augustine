@@ -14,7 +14,7 @@ const BottomNav = () => {
             duration={500}
             className="grid place-items-center"
           >
-            <Icons.UserCircleIcon id="about" className="h-8" />
+            <Icons.UserCircleIcon id="about" className="h-8 icons" />
             <label htmlFor="about">About</label>
           </Link>
         </li>
@@ -27,7 +27,7 @@ const BottomNav = () => {
             duration={500}
             className="grid place-items-center"
           >
-            <Icons.BriefcaseIcon id="projects" className="h-8" />
+            <Icons.BriefcaseIcon id="projects" className="h-8 icons" />
             <label htmlFor="projects">Projects</label>
           </Link>
         </li>
@@ -40,7 +40,7 @@ const BottomNav = () => {
             duration={500}
             className="grid place-items-center"
           >
-            <Icons.EnvelopeIcon id="contact" className="h-8" />
+            <Icons.EnvelopeIcon id="contact" className="h-8 icons" />
             <label htmlFor="contact">Contact</label>
           </Link>
         </li>
