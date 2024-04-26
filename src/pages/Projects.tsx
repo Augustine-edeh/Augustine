@@ -91,12 +91,12 @@ const Projects = () => {
 
       <p className="text-gray-400">Checkout some of my works...</p>
 
-      <ul className="flex flex-wrap gap-x-3 gap-y-10 bg-red-600 mt-20 p-2">
+      <ul className="flex flex-wrap justify-center gap-x-3 gap-y-10 mt-20 p-2">
         {projectList &&
           projectList.map((project) => (
             <li
               key={Math.random()}
-              className="flex flex-col bg-purple-700 w-96 rounded-2xl overflow-hidden"
+              className="flex flex-col w-96 rounded-2xl overflow-hidden ring-1  p-4"
             >
               <div className="bg-blue-300 h-[48%]">
                 <img
@@ -106,28 +106,36 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="relative flex flex-col mx-4 h-[52%] bg-yellow-950 py-3">
-                <h4 className="text-center text-lg font-bold uppercase mb-4 bg-red-500">
+              <div className="relative flex flex-col mx-4 h-[52%] py-3">
+                <h4 className="text-center text-lg font-bold uppercase mb-4">
                   {project.title}
                 </h4>
 
-                <p className="bg-blue-500">{project.description}</p>
+                <p className="">{project.description}</p>
 
                 <ul className="flex flex-wrap py-5 gap-x-2 gap-y-2">
                   {project.technologiesUSed.map((technology) => (
-                    <li className="bg-green-900 px-2 rounded">
+                    <li className="bg-gray-700 px-2 py-0.5 rounded">
                       <span>{technology}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex justify-center gap-x-5 bg-yellow-500 text-center absolute bottom-0 w-full">
-                  <button className="bg-green-300 rounded-2xl px-4 py-1.5">
-                    Live preview
+                <div className="flex justify-center gap-x-5 text-center absolute bottom-0 w-full pb-5">
+                  <button className="  bg-blue-400 rounded-2xl px-4 py-1.5">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      className="underline underline-offset-2"
+                    >
+                      Live Preview
+                    </a>
                   </button>
 
                   <button className="rounded-2xl ring-1 ring-gray-300/50 px-4 py-1.5">
-                    Check on github
+                    <a href={project.githubUrl} target="_blank" className="">
+                      Check on github
+                    </a>
                   </button>
                 </div>
               </div>
