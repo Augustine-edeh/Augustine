@@ -1,5 +1,3 @@
-import { faAudioDescription } from "@fortawesome/free-solid-svg-icons";
-
 const Projects = () => {
   const projectList = [
     {
@@ -102,7 +100,7 @@ const Projects = () => {
               // project items height is in the above logic (min-height)
             >
               {/* project image section */}
-              <div className="bg-blue-300 h-[40%] lg:w-1/2 lg:h-full lg:w-[80%]">
+              <div className="bg-blue-300 h-[40%] lg:h-full lg:w-[80%]">
                 <img
                   src={project.image}
                   alt={project.title}
