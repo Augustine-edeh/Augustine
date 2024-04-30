@@ -4,7 +4,7 @@ const Projects = () => {
       title: "Countries at a glance",
       description:
         "A dynamic level react project, utuilizing the restCountries API for getting countries inforainformations and other general knowledge about countries",
-      image: "/vite.svg",
+      image: "https://i.imgur.com/QzkK6mM.jpeg",
       githubUrl: "https://github.com/augustine-edeh/countries-at-a-glance",
       liveUrl: "https://countriesataglance.vercel.app",
       technologiesUsed: [
@@ -19,7 +19,7 @@ const Projects = () => {
       title: "Qr Xpress",
       description:
         "A QR code hub for creating, downloading and scanning  qr codes",
-      image: "/vite.svg",
+      image: "https://i.imgur.com/b8SeWyC.png",
       githubUrl: "https://github.com/augustine-edeh/Qr-Xpress",
       liveUrl: "https://qr-xpress.vercel.app",
       technologiesUsed: ["Vite", "React.js", "TailwindCSS", "Vercel"],
@@ -28,7 +28,7 @@ const Projects = () => {
       title: "Damilare",
       description:
         "A complete functional portfolio webpage I creared for my 7 years old nephew who is developing an interest in technology and games",
-      image: "/vite.svg",
+      image: "https://i.imgur.com/ASVc209.png",
       githubUrl: "https://github.com/augustine-edeh/damilare",
       liveUrl: "https://damilareai.vercel.app",
       technologiesUsed: ["Vite", "React.js", "TailwindCSS", "Vercel"],
@@ -37,7 +37,7 @@ const Projects = () => {
       title: "Dynamic Calculator web app",
       description:
         "Multi-arithmetic calculator web app. For non-scientific arithmatic calculations, with a subtle error vibration indiccator function for mobile devices",
-      image: "/vite.svg",
+      image: "https://i.imgur.com/ds3HMG8.png",
       githubUrl: "https://github.com/augustine-edeh/dynamic-calculator",
       liveUrl: "https://dynamic-calculator.vercel.app",
       technologiesUsed: ["Vite", "React.js", "TailwindCSS", "Vercel"],
@@ -63,7 +63,7 @@ const Projects = () => {
       title: "Go Country",
       description:
         "Former Version of the Countries at a glance project. Get general information on the countries of the world",
-      image: "/vite.svg",
+      image: "https://i.imgur.com/XvYchvG.png",
       githubUrl: "https://github.com/augustine-edeh/Gocountry.vercel.app",
       liveUrl: "https://Gocountry.vercel.app",
       technologiesUsed: [
@@ -94,8 +94,8 @@ const Projects = () => {
           projectList.map((project, index) => (
             <li
               key={Math.random()}
-              className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-200px)] 
-          lg:h-[calc(100vh/2)] lg:max-w-screen-xl lg:shadow-none ${
+              className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
+          lg:h-[calc(100vh/2.1)] lg:max-w-screen-xl lg:shadow-none ${
             index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           }`}
             >
