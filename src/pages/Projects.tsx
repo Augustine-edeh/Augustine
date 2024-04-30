@@ -110,10 +110,9 @@ const Projects = () => {
 
               {/* text area section */}
               <div
-                className={` z-10 flex flex-col h-[60%] lg:h-auto py-3 px-3 bg-slate-800/80 text-center text-sm lg:w-1/2 
-              lg:-ml-10s
-              ${index % 2 === 0 ? "lg:-ml-10" : "lg:-mr-10"}
-               lg:mt-16 lg:mb-2 lg:shadow-xl`}
+                className={`z-10 flex flex-col h-[60%] lg:h-auto py-3 px-3 bg-slate-800/80 text-center text-sm lg:w-1/2 ${
+                  index % 2 === 0 ? "lg:-ml-10" : "lg:-mr-10"
+                } lg:mt-16 lg:mb-2 lg:shadow-xl`}
               >
                 <h4 className="text-xl font-bold uppercase mt-3 lg:mt-10">
                   {project.title}
