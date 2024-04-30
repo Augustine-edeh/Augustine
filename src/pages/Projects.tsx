@@ -14,7 +14,7 @@ const Projects = () => {
 
       <p className="text-gray-400">Checkout some of my works...</p>
 
-      <ul className="flex flex-wrap justify-center gap-x-3 gap-y-28 lg:gap-y-60 mt-20">
+      <ul className="flex flex-wrap justify-center gap-x-60 gap-y-28 lg:gap-y-60 mt-20">
         {projectList &&
           projectList.map((project, index) => (
             <li
