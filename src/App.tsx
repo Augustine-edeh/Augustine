@@ -1,4 +1,4 @@
-import Header from "./components/navigation/Header";
+import Header from "./components/Header";
 import Hero from "./pages/Hero";
 import BottomNav from "./components/navigation/BottomNav";
 import Contact from "./pages/Contact";

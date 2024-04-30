@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
+import SectionContainer from "../components/SectionContainer";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,10 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen max-w-screen-md px-8 mx-auto text-white"
-    >
+    <SectionContainer id="contact">
       <p className="font-bold text-gray-400">Get in Touch</p>
 
       <h2 className="text-3xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100 underline underline-offset-8 decoration-blue-500">
@@ -114,7 +112,7 @@ const Contact = () => {
           <li className="bg-slate-800/40 h-8 w-8 rounded-full"></li>
         </ul>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

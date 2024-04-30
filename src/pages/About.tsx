@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Icon } from "@iconify/react";
+import Skills from "../components/Skills";
+
+import SectionContainer from "../components/SectionContainer";
 
 const About = () => {
   const controls = useAnimation();
@@ -23,88 +25,15 @@ const About = () => {
     visible: { opacity: 1 },
   };
 
-  const tools = [
-    {
-      toolName: "HTML",
-      icon: "vscode-icons:file-type-html",
-      alt: "HTML",
-    },
-    {
-      toolName: "CSS",
-      icon: "vscode-icons:file-type-css",
-      alt: "CSS",
-    },
-    {
-      toolName: "JavaScript",
-      icon: "vscode-icons:file-type-js-official",
-      alt: "javascript",
-    },
-    {
-      toolName: "git",
-      icon: "vscode-icons:file-type-git",
-      alt: "git",
-    },
-    {
-      toolName: "gitHub",
-      icon: "cib:github",
-      alt: "gitHub",
-    },
-    {
-      toolName: "ReactJS",
-      icon: "vscode-icons:file-type-reactjs",
-      alt: "ReactJS",
-    },
-    {
-      toolName: "Netlify",
-      icon: "vscode-icons:file-type-light-netlify",
-      alt: "Netlify",
-    },
-    {
-      toolName: "Vercel",
-      icon: "vscode-icons:file-type-vercel",
-      alt: "Vercel",
-    },
-    {
-      toolName: "TailwindCSS",
-      icon: "vscode-icons:file-type-tailwind",
-      alt: "Tailwind",
-    },
-    {
-      toolName: "Vite",
-      icon: "vscode-icons:file-type-vite",
-      alt: "Vite",
-    },
-    {
-      toolName: "Typescript",
-      icon: "devicon:typescript",
-      alt: "Typescript",
-    },
-    {
-      toolName: "Nodejs",
-      icon: "devicon:nodejs",
-      alt: "Nodejs",
-    },
-    {
-      toolName: "Express",
-      icon: "skill-icons:expressjs-light",
-      alt: "Express",
-    },
-    {
-      toolName: "MongoDB",
-      icon: "skill-icons:mongodb",
-      alt: "MongoDB",
-    },
-  ];
-
   return (
-    <div id="about" className="min-h-screen py-16 px-8 lg:px-32 bg-slate-900">
+    <SectionContainer id="about">
       <motion.div
         ref={ref}
         initial="hidden"
         animate={controls}
         variants={containerVariants}
         transition={{ duration: 0.6 }}
-        className="py-16 px-8 lg:px-32 bg-slate-900"
+        className="py-16 px- lg:px-32 bg-slate-900"
       >
         <div className="max-w-3xl mx-auto text-">
           <p className="font-bold text-gray-400">So, who am I?</p>
@@ -154,37 +83,10 @@ const About = () => {
             </div>
           </motion.p>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <motion.h2
-            variants={headerVariants}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-xl font-bold text-gray-200 mb-6"
-          >
-            {/* Some of the tools & technologies I use: */}
-            Skills:
-          </motion.h2>
-          <ul className="grid grid-cols-2 md:flex md:flex-wrap gap-3 text-white">
-            {tools &&
-              tools.map((tool) => (
-                <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50">
-                  {/* <motion.img
-                    // variants={headerVariants}
-                    // transition={{ duration: 0.6, delay: 0.5 }}
-                    // className="text-lg text-gray-300 mb-8"
-                    // src={tool.icon}
-                    src={tool.icon}
-                    alt="."
-                    key={Math.random()}
-                    className="h-6"
-                  /> */}
-                  <Icon icon={tool.icon} width="32" height="32" />
-                  <span>{tool.toolName}</span>
-                </li>
-              ))}
-          </ul>
-        </div>
+
+        <Skills />
       </motion.div>
-    </div>
+    </SectionContainer>
   );
   // const first = (second) => {
   //   third;
