@@ -25,7 +25,7 @@ const Projects = () => {
           }`}
             >
               {/* project image section */}
-              <div className="bg-blue-300 h-[40%] lg:h-full lg:w-[80%]">
+              <div className="bg-blue-300 h-[40%] lg:h-full lg:w-[80%] m-2 rounded-md overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
