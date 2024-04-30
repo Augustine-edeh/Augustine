@@ -45,27 +45,23 @@ const ProjectList = () => {
               </ul>
 
               <div className="flex justify-center gap-x-5 mt-auto">
-                <button className="bg-blue-700 rounded-2xl px-4 py-1.5">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-2"
-                  >
-                    Live Preview
-                  </a>
-                </button>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline underline-offset-2 bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl px-4 py-1.5"
+                >
+                  Live Preview
+                </a>
 
-                <button className="rounded-2xl ring-1 ring-gray-300/50 px-4 py-1.5">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className=""
-                  >
-                    Check on GitHub
-                  </a>
-                </button>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline underline-offset-2 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl ring-1 ring-gray-300/50 px-4 py-1.5"
+                >
+                  Check on GitHub
+                </a>
               </div>
             </div>
           </li>
