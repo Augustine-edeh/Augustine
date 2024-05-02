@@ -29,14 +29,16 @@ const ProjectList = () => {
                   index % 2 === 0 ? "lg:-ml-10" : "lg:-mr-10"
                 } lg:mt-16 lg:mb-2 lg:shadow-xl`}
               >
-                <h4 className="text-xl font-bold uppercase mt-3 lg:mt-10">
+                <h4 className="text-2xl font-bold uppercase mt-3 lg:mt-10">
                   {project.title}
                 </h4>
 
-                <p className="my-7">{project.description}</p>
+                <p className="my-7 text-[14px] text-gray-300">
+                  {project.description}
+                </p>
 
                 {/* technologies used */}
-                <ul className="flex flex-wrap gap-x-2 gap-y-2 justify-center">
+                <ul className="flex flex-wrap gap-2 justify-center">
                   {project.technologiesUsed.map((technology, index) => (
                     <li
                       key={index}
