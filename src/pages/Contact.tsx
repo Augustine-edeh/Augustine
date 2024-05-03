@@ -22,6 +22,10 @@ const Contact = () => {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+
+    // activate message loading state
+    setIsSending(true);
+
     // Implement functionality to send the form data here.
     console.log(formData);
     // Clear form after submission
@@ -30,7 +34,12 @@ const Contact = () => {
       email: "",
       message: "",
     });
+
+    // simulate message loading state deactivation
+    setTimeout(() => setIsSending(false), 2000);
   };
+
+  const [isSending, setIsSending] = useState(false);
 
   return (
     <SectionContainer id="contact">
@@ -98,8 +107,14 @@ const Contact = () => {
           type="submit"
           className="flex justify-center items-center bg-blue-500 px-5 py-3 ml-auto w-fit font-bold rounded-lg shadow-lg"
         >
-          Send
-          <FontAwesomeIcon icon={faPaperPlane} size="lg" className="ml-3" />
+          {isSending ? (
+            "Sending..."
+          ) : (
+            <>
+              Send
+              <FontAwesomeIcon icon={faPaperPlane} size="lg" className="ml-3" />
+            </>
+          )}
         </button>
       </form>
 
