@@ -4,6 +4,7 @@ import BottomNav from "./components/navigation/BottomNav";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import LightUI from "./components/LightUI";
 BottomNav;
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       <Projects />
       <Contact />
       <BottomNav />
-      <div className="hidden md:block fixed h-40 w-40 shadow-[50px_-80px_250px_#419aff93] bg-slate-700/[11%] bottom-0 left-0 rounded-full -ml-36 -mb-32"></div>
+      <LightUI />
     </main>
   );
 };
