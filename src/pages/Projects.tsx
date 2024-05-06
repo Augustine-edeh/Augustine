@@ -1,5 +1,5 @@
 import ProjectList from "../components/ProjectList";
-import SectionContainer from "../components/SectionContainer";
+import SectionContainer from "../components/SectionWrapper";
 
 SectionContainer;
 

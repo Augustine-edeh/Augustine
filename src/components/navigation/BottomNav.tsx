@@ -10,7 +10,7 @@ const BottomNav = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={25}
             duration={500}
             className="grid place-items-center"
           >
@@ -25,7 +25,7 @@ const BottomNav = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={25}
             duration={500}
             className="grid place-items-center"
           >
@@ -40,7 +40,7 @@ const BottomNav = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={25}
             duration={500}
             className="grid place-items-center"
           >

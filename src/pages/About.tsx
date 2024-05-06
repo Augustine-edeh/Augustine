@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Skills from "../components/Skills";
 
-import SectionContainer from "../components/SectionContainer";
+import SectionContainer from "../components/SectionWrapper";
 
 const About = () => {
   const controls = useAnimation();
