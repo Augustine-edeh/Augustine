@@ -11,7 +11,7 @@ const HeadNav = () => {
           smooth={true}
           offset={-80}
           duration={500}
-          className="text-blue-300 h-fit text-2xl cursor-pointer p-2"
+          className="text-blue-300 h-fit text-2xl cursor-pointer sm:p-2"
         >
           {"</> Augustine"}
         </Link>
@@ -24,7 +24,7 @@ const HeadNav = () => {
                   to="about"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={0}
                   duration={500}
                   className="cursor-pointer"
                 >
@@ -36,7 +36,7 @@ const HeadNav = () => {
                   to="projects"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={-50}
                   duration={500}
                   className="cursor-pointer"
                 >
@@ -48,7 +48,7 @@ const HeadNav = () => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-100}
+                  offset={-110}
                   duration={500}
                   className="cursor-pointer"
                 >
