@@ -55,6 +55,11 @@ const tools = [
     alt: "Typescript",
   },
   {
+    toolName: "Next.js",
+    icon: "devicon:nextjs",
+    alt: "Next.js",
+  },
+  {
     toolName: "Nodejs",
     icon: "devicon:nodejs",
     alt: "Nodejs",
