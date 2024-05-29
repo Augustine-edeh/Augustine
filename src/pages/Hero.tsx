@@ -53,7 +53,10 @@ const Hero = () => {
         className="flex h-56 z-0"
       >
         <div className="container h-full w-56 bg-black rounded-lg overflow-clip z-10 shadow-2xl">
-          <img src={profileImg} alt="Augustine" className="h" />
+          <picture>
+            <source type="image/webp" srcSet="/profileImg.webp" />
+            <img src="/profileImg.png" alt="Augustine" className="" />
+          </picture>
         </div>
         <div className="h-full w-56 h bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl"></div>
       </motion.section>
