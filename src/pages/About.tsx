@@ -50,13 +50,6 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg text-gray-300 mb-8"
           >
-            {/* <p>
-              As an advancing frontend web developer, I'm passionate about
-              leveraging technology to create engaging and user-friendly
-              experiences. Beyond coding, I'm also an enthusiast in aerospace
-              and aviation, finding inspiration from the innovation and
-              precision in this field.
-            </p> */}
             <div className="flex flex-col gap-3 sm:text-justify">
               <p>
                 Hi there! I'm Augustine Edeh, a frontend developer with a
