@@ -63,14 +63,18 @@ const Hero = () => {
       <section className="text-white text-center">
         <h3 className="text-2xl">Hello, I'm</h3>
         <div>
-          <p className="text-3xl my-5 font-extrabold"> Augustine Edeh</p>
+          <p className="text-3xl my-5 font-extrabold">Augustine Edeh</p>
           <p className="p-0 mt-8">
-            an{" "}
-            <span className="text-teal-500 text-2xl">
+            a passionate{" "}
+            <span className="text-2xl text-blue-400">Frontend Developer </span>
+            {/* <span className="text-teal-500 text-2xl">
               Advancing frontend developer
+            </span>{" "} */}
+            & a
+            <span className="text-teal-500/80 text-lg">
+              {" "}
+              fullstack developer
             </span>{" "}
-            &{" "}
-            <span className="text-blue-400 text-lg">a fullstack developer</span>{" "}
             in the making (self tught)
           </p>
         </div>
