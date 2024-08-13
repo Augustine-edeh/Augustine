@@ -1,5 +1,5 @@
-import ProjectList from "../components/ProjectList";
-import SectionContainer from "../components/SectionWrapper";
+import ProjectList from "../components/ui/ProjectList";
+import SectionContainer from "../components/ui/SectionWrapper";
 
 SectionContainer;
 

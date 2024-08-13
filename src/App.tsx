@@ -1,10 +1,10 @@
-import Header from "./components/Header";
+import Header from "./components/ui/Header";
 import Hero from "./pages/Hero";
 import BottomNav from "./components/navigation/BottomNav";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import LightUI from "./components/LightUI";
+import LightUI from "./components/ui/LightUI";
 BottomNav;
 const App = () => {
   return (

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Skills from "../components/Skills";
+import Skills from "../components/ui/Skills";
 
-import SectionContainer from "../components/SectionWrapper";
+import SectionContainer from "../components/ui/SectionWrapper";
 
 const About = () => {
   const controls = useAnimation();

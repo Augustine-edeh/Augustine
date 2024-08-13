@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
-import SectionContainer from "../components/SectionWrapper";
+import SectionContainer from "../components/ui/SectionWrapper";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import tools from "../assets/data/tools";
+import tools from "../../assets/data/tools";
 import { Icon } from "@iconify/react";
 
 const Skills = () => {

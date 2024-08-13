@@ -1,5 +1,5 @@
 import Headeroom from "react-headroom";
-import HeadNav from "./navigation/HeadNav";
+import HeadNav from "../navigation/HeadNav";
 
 const Header = () => {
   return (

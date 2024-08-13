@@ -1,4 +1,4 @@
-import project_Array from "../assets/data/projects.js";
+import project_Array from "../../assets/data/projects.js";
 import Tilt from "react-parallax-tilt";
 
 const ProjectList = () => {
