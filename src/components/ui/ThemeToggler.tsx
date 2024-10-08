@@ -4,9 +4,8 @@ const ThemeToggler = () => {
   // Mobile device vibration trigger function
   const triggerVibration = () => {
     if (navigator.vibrate) {
-      // Vibrates for 200ms, pauses for 100ms, then vibrates for 200ms
-      navigator.vibrate([200, 100, 200]);
-      console.log("Device vibrating...");
+      // Single short vibration pulse for subtle feedback
+      navigator.vibrate(50);
     } else {
       console.log("Vibration not supported on this device.");
     }
