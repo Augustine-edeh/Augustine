@@ -24,7 +24,6 @@ const Contact = () => {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    console.log(e.target);
 
     setFormData((prevState) => ({
       ...prevState,

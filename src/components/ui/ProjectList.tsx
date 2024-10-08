@@ -1,4 +1,3 @@
-// import project_Array from "../../assets/data/projects.ts";
 import Tilt from "react-parallax-tilt";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
