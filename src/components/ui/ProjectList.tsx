@@ -1,19 +1,34 @@
-import project_Array from "../../assets/data/projects.ts";
+// import project_Array from "../../assets/data/projects.ts";
 import Tilt from "react-parallax-tilt";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 
+// Cloundinary Image instance setup
 const cld = new Cloudinary({
   cloud: {
     cloudName: "dxmyy7q3x",
   },
 });
 
-const ProjectList = () => {
+// Type definitions for the project data
+type Project = {
+  title: string;
+  description: string;
+  technologiesUsed: string[];
+  liveUrl: string;
+  githubUrl: string;
+  cldImg_publicId: string;
+};
+
+type ProjectListProps = {
+  projects: Project[];
+};
+
+const ProjectList = ({ projects }: ProjectListProps) => {
   return (
     <ul className="flex flex-wrap justify-center gap-x-60 gap-y-28 lg:gap-y-60 mt-20">
-      {project_Array &&
-        project_Array.map((project, index) => (
+      {projects &&
+        projects.map((project, index) => (
           <Tilt>
             <li
               key={Math.random()}

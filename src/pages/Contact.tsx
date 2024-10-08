@@ -1,16 +1,28 @@
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import SectionContainer from "../components/ui/SectionWrapper";
 
+// Type definition for form data
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (e) => {
+  const [isSending, setIsSending] = useState(false);
+
+  // Handler for input change events
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     console.log(e.target);
 
@@ -20,26 +32,26 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  // Handler for form submission
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // activate message loading state
+    // Activate message loading state
     setIsSending(true);
 
     // Implement functionality to send the form data here.
     console.log(formData);
+
+    // Simulate message loading state deactivation
+    setTimeout(() => setIsSending(false), 2000);
+
     // Clear form after submission
     setFormData({
       name: "",
       email: "",
       message: "",
     });
-
-    // simulate message loading state deactivation
-    setTimeout(() => setIsSending(false), 2000);
   };
-
-  const [isSending, setIsSending] = useState(false);
 
   return (
     <SectionContainer id="contact">
@@ -49,12 +61,13 @@ const Contact = () => {
         Contact.
       </h2>
 
-      <p className="text-gray-400">drop me a line...</p>
+      <p className="text-gray-400">Drop me a line...</p>
 
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-y-8 mt-10 mb-5"
       >
+        {/* Name input */}
         <div className="flex flex-col gap-y-2">
           <label htmlFor="name" className="font-bold w-fit">
             Your Name
@@ -66,26 +79,29 @@ const Contact = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="What's your name?"
-            className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4  border-slate-800 focus:border-blue-500 shadow-lg"
+            className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
             required
           />
         </div>
+
+        {/* Email input */}
         <div className="flex flex-col gap-y-2">
           <label htmlFor="email" className="font-bold w-fit">
             Your Email
           </label>
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="exampla@email.com"
+            placeholder="example@email.com"
             required
-            className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4  border-slate-800 focus:border-blue-500 shadow-lg"
+            className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
           />
         </div>
 
+        {/* Message textarea */}
         <div className="flex flex-col gap-y-2">
           <label htmlFor="message" className="font-bold w-fit">
             Your Message
@@ -103,6 +119,7 @@ const Contact = () => {
           ></textarea>
         </div>
 
+        {/* Submit button */}
         <button
           type="submit"
           className="flex justify-center items-center bg-blue-500 px-5 py-3 ml-auto w-fit font-bold rounded-lg shadow-lg"

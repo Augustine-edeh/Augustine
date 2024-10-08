@@ -1,4 +1,5 @@
 import ProjectList from "../components/ui/ProjectList";
+import Projects_Array from "../assets/data/projects";
 import SectionContainer from "../components/ui/SectionWrapper";
 
 SectionContainer;
@@ -14,7 +15,7 @@ const Projects = () => {
 
       <p className="text-gray-400">Checkout some of my works...</p>
 
-      <ProjectList />
+      <ProjectList projects={Projects_Array} />
     </SectionContainer>
   );
 };
