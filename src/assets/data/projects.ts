@@ -80,13 +80,7 @@ const projectList = [
     cldImg_publicId: "portfolio_project/Go-country_laptopView",
     githubUrl: "https://github.com/Augustine-edeh/GoCountry",
     liveUrl: "https://augustine-edeh.github.io/GoCountry",
-    technologiesUsed: [
-      "Vite",
-      "React.js",
-      "TailwindCSS",
-      "Rest Countries API",
-      "Vercel",
-    ],
+    technologiesUsed: ["Vite", "React.js", "Rest Countries API", "Vercel"],
   },
 ];
 
