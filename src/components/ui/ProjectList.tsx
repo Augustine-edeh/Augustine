@@ -1,5 +1,13 @@
-import project_Array from "../../assets/data/projects.js";
+import project_Array from "../../assets/data/projects.ts";
 import Tilt from "react-parallax-tilt";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dxmyy7q3x",
+  },
+});
 
 const ProjectList = () => {
   return (
@@ -16,10 +24,9 @@ const ProjectList = () => {
             >
               {/* project image section */}
               <div className="bg-blue-300 h-[40%] lg:h-full lg:w-[80%] m-2 rounded-md overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="bg-gray-400 w-full h-full"
+                <AdvancedImage
+                  cldImg={cld.image(`${project.cldImg_publicId}`)}
+                  className="h-full w-full"
                 />
               </div>
 
