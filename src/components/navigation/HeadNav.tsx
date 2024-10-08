@@ -1,5 +1,5 @@
-import * as Icons from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
+import ThemeToggler from "../ui/ThemeToggler";
 
 const HeadNav = () => {
   return (
@@ -57,9 +57,7 @@ const HeadNav = () => {
               </li>
             </ul>
           </nav>
-          <button className="h-fit">
-            <Icons.SunIcon className="text-white h-7" />
-          </button>
+          <ThemeToggler />
         </div>
       </nav>
     </header>
