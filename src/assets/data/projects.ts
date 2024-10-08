@@ -15,7 +15,7 @@ const projectList = [
     ],
   },
   {
-    title: "My Todoly",
+    title: "Todoly",
     description:
       "A task management app built with Next.js, featuring task addition, deletion, and filtering. The app includes a drag-and-drop reordering feature available on large screens and above.",
     cldImg_publicId: "portfolio_project/Todoly_laptopView",
