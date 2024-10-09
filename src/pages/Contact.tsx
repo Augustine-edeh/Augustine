@@ -1,7 +1,8 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import SectionContainer from "../components/ui/SectionWrapper";
+import emailjs from "@emailjs/browser";
 
 // Type definition for form data
 type FormData = {
@@ -17,6 +18,19 @@ const Contact = () => {
     message: "",
   });
 
+  const emailJsInfo = {
+    serviceId: "service_portfolio",
+    publicKey: "e1F5G0lLl-sSmRvXt",
+    templateId: "template_johlm2k",
+  };
+
+  const templateParams = {
+    from_name: formData.name,
+    from_email: formData.email,
+    to_name: "Augustine Edeh",
+    message: formData.message,
+  };
+
   const [isSending, setIsSending] = useState(false);
 
   // Handler for input change events
@@ -30,6 +44,8 @@ const Contact = () => {
       [name]: value,
     }));
   };
+
+  const form = useRef();
 
   // Handler for form submission
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -52,6 +68,23 @@ const Contact = () => {
     });
   };
 
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(emailJsInfo.serviceId, emailJsInfo.templateId, form.current, {
+        publicKey: emailJsInfo.publicKey,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.message);
+        }
+      );
+  };
+
   return (
     <SectionContainer id="contact">
       <p className="font-bold text-gray-400">Get in Touch</p>
@@ -63,7 +96,8 @@ const Contact = () => {
       <p className="text-gray-400">Drop me a line...</p>
 
       <form
-        onSubmit={handleSubmit}
+        ref={form}
+        onSubmit={sendEmail}
         className="flex flex-col gap-y-8 mt-10 mb-5"
       >
         {/* Name input */}
@@ -74,8 +108,8 @@ const Contact = () => {
           <input
             type="text"
             id="name"
-            name="name"
-            value={formData.name}
+            name="user_name"
+            // value={formData.name}
             onChange={handleChange}
             placeholder="What's your name?"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
@@ -91,8 +125,8 @@ const Contact = () => {
           <input
             type="email"
             id="email"
-            name="email"
-            value={formData.email}
+            name="user_email"
+            // value={formData.email}
             onChange={handleChange}
             placeholder="example@email.com"
             required
@@ -110,7 +144,7 @@ const Contact = () => {
             cols={30}
             rows={10}
             name="message"
-            value={formData.message}
+            // value={formData.message}
             onChange={handleChange}
             placeholder="Kindly enter your message"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
