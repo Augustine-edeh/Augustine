@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import SectionContainer from "../components/ui/SectionWrapper";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // Type definition for form data
 type FormData = {
@@ -67,10 +69,39 @@ const Contact = () => {
       message: "",
     });
   };
+  const notify = {
+    success: () =>
+      toast.success("Message sent!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+      }),
+    error: () =>
+      // toast.error(`Message not sent! \n ${errorMessage.split(0)[0]}`, {
+
+      toast.error("Error. Message not sent!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+      }),
+  };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setIsSending(true);
     emailjs
       .sendForm(emailJsInfo.serviceId, emailJsInfo.templateId, form.current, {
         publicKey: emailJsInfo.publicKey,
@@ -78,15 +109,21 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setIsSending(false);
+          notify.success();
         },
         (error) => {
           console.log("FAILED...", error.message);
+          setIsSending(false);
+          notify.error();
         }
       );
   };
 
   return (
     <SectionContainer id="contact">
+      <ToastContainer />
+
       <p className="font-bold text-gray-400">Get in Touch</p>
 
       <h2 className="text-3xl font-bold mt-5 mb-2 text-gray-800 dark:text-gray-100 underline underline-offset-8 decoration-blue-500">
