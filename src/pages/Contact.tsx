@@ -47,20 +47,10 @@ const Contact = () => {
     }));
   };
 
-  const form = useRef();
-
+  const form = useRef<HTMLFormElement | null>(null);
   // Handler for form submission
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Activate message loading state
-    setIsSending(true);
-
-    // Implement functionality to send the form data here.
-    console.log(formData);
-
-    // Simulate message loading state deactivation
-    setTimeout(() => setIsSending(false), 2000);
 
     // Clear form after submission
     setFormData({
@@ -108,6 +98,9 @@ const Contact = () => {
       })
       .then(
         () => {
+          if (form.current) {
+            form.current.reset(); // Clear form inputs after submission
+          }
           console.log("SUCCESS!");
           setIsSending(false);
           notify.success();
