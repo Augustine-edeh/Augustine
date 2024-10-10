@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent, useRef } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
 import SectionContainer from "../components/ui/SectionWrapper";
@@ -6,59 +6,17 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// Type definition for form data
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
-
 const Contact = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const emailJsInfo = {
     serviceId: "service_portfolio",
     publicKey: "e1F5G0lLl-sSmRvXt",
     templateId: "template_johlm2k",
   };
 
-  const templateParams = {
-    from_name: formData.name,
-    from_email: formData.email,
-    to_name: "Augustine Edeh",
-    message: formData.message,
-  };
-
   const [isSending, setIsSending] = useState(false);
 
-  // Handler for input change events
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
   const form = useRef<HTMLFormElement | null>(null);
-  // Handler for form submission
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
 
-    // Clear form after submission
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
   const notify = {
     success: () =>
       toast.success("Message sent!", {
@@ -73,8 +31,6 @@ const Contact = () => {
         // transition: Bounce,
       }),
     error: () =>
-      // toast.error(`Message not sent! \n ${errorMessage.split(0)[0]}`, {
-
       toast.error("Error. Message not sent!", {
         position: "top-right",
         autoClose: 5000,
@@ -139,8 +95,6 @@ const Contact = () => {
             type="text"
             id="name"
             name="user_name"
-            // value={formData.name}
-            onChange={handleChange}
             placeholder="What's your name?"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
             required
@@ -156,8 +110,6 @@ const Contact = () => {
             type="email"
             id="email"
             name="user_email"
-            // value={formData.email}
-            onChange={handleChange}
             placeholder="example@email.com"
             required
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
@@ -174,8 +126,6 @@ const Contact = () => {
             cols={30}
             rows={10}
             name="message"
-            // value={formData.message}
-            onChange={handleChange}
             placeholder="Kindly enter your message"
             className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
             required
