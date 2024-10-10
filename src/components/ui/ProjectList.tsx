@@ -5,7 +5,7 @@ import { AdvancedImage } from "@cloudinary/react";
 // Cloundinary Image instance setup
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "dxmyy7q3x",
+    cloudName: import.meta.env.VITE_CLOUD_NAME,
   },
 });
 

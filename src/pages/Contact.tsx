@@ -8,9 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const emailJsInfo = {
-    serviceId: "service_portfolio",
-    publicKey: "e1F5G0lLl-sSmRvXt",
-    templateId: "template_johlm2k",
+    serviceId: import.meta.env.VITE_SERVICE_ID,
+    publicKey: import.meta.env.VITE_PUBLIC_KEY,
+    templateId: import.meta.env.VITE_TEMPLATE_ID,
   };
 
   const [isSending, setIsSending] = useState(false);
