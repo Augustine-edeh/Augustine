@@ -5,6 +5,7 @@ import SectionContainer from "../components/ui/SectionWrapper";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CircularDots from "../components/ui/CircularDots";
 
 const Contact = () => {
   const emailJsInfo = {
@@ -148,15 +149,7 @@ const Contact = () => {
         </button>
       </form>
 
-      <div>
-        <ul className="flex justify-evenly mb-32">
-          <li className="bg-slate-800/40 h-8 w-8 rounded-full"></li>
-          <li className="bg-slate-800/40 h-8 w-8 rounded-full"></li>
-          <li className="bg-slate-800/40 h-8 w-8 rounded-full"></li>
-          <li className="bg-slate-800/40 h-8 w-8 rounded-full"></li>
-          <li className="bg-slate-800/40 h-8 w-8 rounded-full"></li>
-        </ul>
-      </div>
+      <CircularDots numberOfDots={5} />
     </SectionContainer>
   );
 };
