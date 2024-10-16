@@ -1,3 +1,5 @@
+"use client";
+
 import Tilt from "react-parallax-tilt";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
