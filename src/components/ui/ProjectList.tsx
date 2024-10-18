@@ -28,9 +28,8 @@ const ProjectList = ({ projects }: ProjectListProps) => {
     <ul className="flex flex-wrap justify-center gap-x-60 gap-y-28 lg:gap-y-60 mt-20">
       {projects &&
         projects.map((project, index) => (
-          <Tilt>
+          <Tilt key={project.githubUrl}>
             <li
-              key={Math.random()}
               className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
     lg:h-[calc(100vh/2.1)] lg:max-w-screen-xl lg:shadow-none ${
       index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
