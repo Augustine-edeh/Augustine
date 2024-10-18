@@ -1,10 +1,19 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import tools from "../../assets/data/tools";
 import { Icon } from "@iconify/react";
 
-const Skills = () => {
+type Skills = {
+  toolName: string;
+  icon: string;
+  alt: string;
+};
+
+type SkillsProps = {
+  skillSet: Skills[];
+};
+
+const Skills = ({ skillSet }: SkillsProps) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -22,6 +31,7 @@ const Skills = () => {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
+
   return (
     <div>
       <motion.div
@@ -45,8 +55,8 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="grid grid-cols-2 md:flex md:flex-wrap gap-3 text-white"
         >
-          {tools &&
-            tools.map((tool) => (
+          {skillSet &&
+            skillSet.map((skill_tool) => (
               <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50">
                 {/* <motion.img
               // variants={headerVariants}
@@ -58,8 +68,8 @@ const Skills = () => {
               key={Math.random()}
               className="h-6"
             /> */}
-                <Icon icon={tool.icon} width="32" height="32" />
-                <span>{tool.toolName}</span>
+                <Icon icon={skill_tool.icon} width="32" height="32" />
+                <span>{skill_tool.toolName}</span>
               </li>
             ))}
         </motion.ul>

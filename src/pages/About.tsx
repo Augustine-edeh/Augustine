@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import tools from "../assets/data/tools";
 import Skills from "../components/ui/Skills";
 
 import SectionContainer from "../components/ui/SectionWrapper";
@@ -77,7 +78,7 @@ const About = () => {
           </motion.p>
         </div>
 
-        <Skills />
+        <Skills skillSet={tools} />
       </motion.div>
     </SectionContainer>
   );
