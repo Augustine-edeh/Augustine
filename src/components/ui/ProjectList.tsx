@@ -1,14 +1,4 @@
-import Tilt from "react-parallax-tilt";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage } from "@cloudinary/react";
 import ProjectCard from "./ProjectCard";
-
-// Cloundinary Image instance setup
-const cld = new Cloudinary({
-  cloud: {
-    cloudName: import.meta.env.VITE_CLOUD_NAME,
-  },
-});
 
 // Type definitions for the project data
 type Project = {
