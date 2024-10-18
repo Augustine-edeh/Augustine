@@ -46,7 +46,7 @@ const About = () => {
           >
             About Me.
           </motion.h2>
-          <motion.p
+          <motion.div
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg text-gray-300 mb-8"
@@ -75,7 +75,7 @@ const About = () => {
                 together!
               </p>
             </div>
-          </motion.p>
+          </motion.div>
         </div>
 
         <Skills skillSet={tools} />

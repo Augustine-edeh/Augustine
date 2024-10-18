@@ -57,7 +57,10 @@ const Skills = ({ skillSet }: SkillsProps) => {
         >
           {skillSet &&
             skillSet.map((skill_tool) => (
-              <li className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50">
+              <li
+                className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50"
+                key={skill_tool.toolName}
+              >
                 {/* <motion.img
               // variants={headerVariants}
               // transition={{ duration: 0.6, delay: 0.5 }}
