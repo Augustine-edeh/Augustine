@@ -1,5 +1,3 @@
-"use client";
-
 import Tilt from "react-parallax-tilt";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
@@ -43,6 +41,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
                 <AdvancedImage
                   cldImg={cld.image(`${project.cldImg_publicId}`)}
                   className="h-full w-full"
+                  alt={project.title}
                 />
               </div>
 
