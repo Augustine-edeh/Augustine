@@ -24,6 +24,9 @@ type ProjectListProps = {
 };
 
 const ProjectList = ({ projects }: ProjectListProps) => {
+  {
+    console.log(import.meta.env.VITE_CLOUD_NAME);
+  }
   return (
     <ul className="flex flex-wrap justify-center gap-x-60 gap-y-28 lg:gap-y-60 mt-20">
       {projects &&
