@@ -28,9 +28,8 @@ lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
         </div>
 
         {/* Project text section */}
-        {/* FIXME: remove dead text-sm style class below */}
         <div
-          className={`z-10 flex flex-col h-[60%] lg:h-auto py-3 px-3 bg-slate-800/80 text-center text- sm  lg:w-1/2 lg :w-[50%] ${
+          className={`z-10 flex flex-col h-[60%] lg:h-auto py-3 px-3 bg-slate-800/80 text-center lg:w-1/2 lg :w-[50%] ${
             index % 2 === 0 ? "lg:-ml-10" : "lg:-mr-10"
           } lg:mt-10 lg:mb-2 lg:shadow-xl overflow-scroll`}
         >
