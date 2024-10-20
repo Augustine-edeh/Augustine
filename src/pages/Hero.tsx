@@ -109,6 +109,7 @@ const Hero = () => {
               size="2xl"
               className="h-8 text-white"
             />
+            <span className="sr-only">LinkedIn profile</span>
           </a>
           <a
             href="https://github.com/Augustine-edeh"
@@ -120,6 +121,7 @@ const Hero = () => {
               size="2xl"
               className="h-full w-full text-white"
             />
+            <span className="sr-only">Github profile</span>
           </a>
         </div>
       </section>

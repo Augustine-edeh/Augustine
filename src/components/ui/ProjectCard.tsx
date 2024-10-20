@@ -11,12 +11,13 @@ const cld = new Cloudinary({
 
 const ProjectCard = ({ project, index }) => {
   return (
-    <Tilt key={project.githubUrl}>
-      <li
+    <li>
+      <Tilt
+        key={project.githubUrl}
         className={`flex flex-col rounded-2xl bg-red-500 lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
-lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
-          index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-        }`}
+      lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
+        index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+      }`}
       >
         {/* Project image section */}
         <div className="bg-blue-300 h-[40%] lg:h-full lg:w-[90%] m-2 lg:m-0 rounded-md overflow-hidden">
@@ -75,8 +76,8 @@ lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
             </a>
           </div>
         </div>
-      </li>
-    </Tilt>
+      </Tilt>
+    </li>
   );
 };
 

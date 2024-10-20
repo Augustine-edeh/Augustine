@@ -14,6 +14,7 @@ const ThemeToggler = () => {
   return (
     <button className="h-fit">
       <Icons.SunIcon onClick={triggerVibration} className="text-white h-7" />
+      <span className="sr-only">Toggle Theme</span>
     </button>
   );
 };
