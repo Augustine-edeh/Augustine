@@ -14,7 +14,7 @@ const ProjectCard = ({ project, index }) => {
     <li>
       <Tilt
         key={project.githubUrl}
-        className={`flex flex-col rounded-2xl bg-red-500 lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
+        className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
       lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
