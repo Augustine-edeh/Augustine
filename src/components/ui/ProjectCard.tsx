@@ -25,6 +25,7 @@ const ProjectCard = ({ project, index }) => {
             cldImg={cld.image(`${project.cldImg_publicId}`)}
             className="h-full w-full"
             alt={project.title}
+            loading="lazy"
           />
         </div>
 
@@ -62,6 +63,7 @@ const ProjectCard = ({ project, index }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline underline-offset-2 bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl px-4 py-1.5"
+              aria-label={`View live preview of the ${project.title} project`}
             >
               Live Preview
             </a>
@@ -71,6 +73,7 @@ const ProjectCard = ({ project, index }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline underline-offset-2 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl ring-1 ring-gray-300/50 px-4 py-1.5"
+              aria-label={`Go to gitHub repo of the ${project.title} project`}
             >
               Check on GitHub
             </a>
