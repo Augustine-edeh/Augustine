@@ -1,6 +1,9 @@
 import Tilt from "react-parallax-tilt";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { useState } from "react";
 
 // Cloundinary Image instance setup
 const cld = new Cloudinary({
@@ -10,6 +13,8 @@ const cld = new Cloudinary({
 });
 
 const ProjectCard = ({ project, index }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <li>
       <Tilt
@@ -20,13 +25,17 @@ const ProjectCard = ({ project, index }) => {
       }`}
       >
         {/* Project image section */}
-        <div className="bg-blue-300 h-[40%] lg:h-full lg:w-[90%] m-2 lg:m-0 rounded-md overflow-hidden">
-          <AdvancedImage
-            cldImg={cld.image(`${project.cldImg_publicId}`)}
-            className="h-full w-full"
-            alt={project.title}
-            loading="lazy"
-          />
+        <div className="bg- blue-300 h-[40%] lg:h-full lg:w-[90%] m-2 lg:m-0 rounded-md overflow-hidden">
+          <SkeletonTheme baseColor="#1e293b" highlightColor="#64748b">
+            {isLoading && <Skeleton height={"99%"} />}
+            <AdvancedImage
+              cldImg={cld.image(`${project.cldImg_publicId}`)}
+              className="h-full w-full"
+              alt={project.title}
+              loading="lazy"
+              onLoad={() => setIsLoading(false)}
+            />
+          </SkeletonTheme>
         </div>
 
         {/* Project text section */}
