@@ -5,7 +5,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useState } from "react";
 
-// Cloundinary Image instance setup
+// Cloudinary Image instance setup
 const cld = new Cloudinary({
   cloud: {
     cloudName: import.meta.env.VITE_CLOUD_NAME,
@@ -14,6 +14,7 @@ const cld = new Cloudinary({
 
 const ProjectCard = ({ project, index }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   return (
     <li>
@@ -25,17 +26,30 @@ const ProjectCard = ({ project, index }) => {
       }`}
       >
         {/* Project image section */}
-        <div className="bg- blue-300 h-[40%] lg:h-full lg:w-[90%] m-2 lg:m-0 rounded-md overflow-hidden">
+        <div className="h-[40%] lg:h-full lg:w-[90%] m-2 lg:m-0 rounded-md overflow-hidden">
           <SkeletonTheme baseColor="#1e293b" highlightColor="#64748b">
             {isLoading && <Skeleton height={"99%"} />}
+          </SkeletonTheme>
+
+          {!hasError && (
             <AdvancedImage
               cldImg={cld.image(`${project.cldImg_publicId}`)}
               className="h-full w-full"
               alt={project.title}
               loading="lazy"
               onLoad={() => setIsLoading(false)}
+              onError={() => {
+                setIsLoading(false); // Stop showing skeleton
+                setHasError(true); // Set error state
+              }}
             />
-          </SkeletonTheme>
+          )}
+
+          {hasError && (
+            <p className="grid place-content-center text-center text-gray-400 bg-slate-500 h-full w-full">
+              Image failed to load.
+            </p>
+          )}
         </div>
 
         {/* Project text section */}
@@ -49,7 +63,7 @@ const ProjectCard = ({ project, index }) => {
             {project.title}
           </h4>
 
-          <hr />
+          <hr className=" border-slate- 400" />
 
           {/* Project description */}
           <p className="my-7 text-sm lg:text-lg text-gray-300">
