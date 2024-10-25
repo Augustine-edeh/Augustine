@@ -46,14 +46,16 @@ const ThemeToggler = () => {
         <span className="sr-only">Toggle Theme</span>
       </button> */}
 
-      <Classic
-        placeholder="Toggle theme"
-        onToggle={() => {
-          triggerVibration();
-          themeSwitchHanlder();
-        }}
-        className="[&_svg]:w-7 [&_svg]:h-7"
-      />
+      <div className="bg-gray-500 dark:bg-transparent size-10 rounded-full grid place-items-center">
+        <Classic
+          placeholder="Toggle theme"
+          onToggle={() => {
+            triggerVibration();
+            themeSwitchHanlder();
+          }}
+          className="[&_svg]:w-7 [&_svg]:h-7"
+        />
+      </div>
     </>
   );
 };
