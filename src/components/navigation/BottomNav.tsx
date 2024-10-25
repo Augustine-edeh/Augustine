@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 const BottomNav = () => {
   return (
-    <nav className="fixed md:hidden bottom-5 right-0 left-0 bg-slate-800 backdrop-blur-[6px] shadow-xl rounded-full w-[90dvw] mx-auto text-white z-10 select-none">
+    <nav className="fixed md:hidden bottom-5 right-0 left-0 bg-white dark:bg-slate-800 backdrop-blur-[6px] shadow-xl rounded-full w-[90dvw] mx-auto text-black dark:text-white z-10 select-none">
       <ul className="flex justify-evenly py-2">
         <li className="bottom-nav cursor-pointer">
           <Link

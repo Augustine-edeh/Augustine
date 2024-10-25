@@ -46,7 +46,7 @@ const ThemeToggler = () => {
         <span className="sr-only">Toggle Theme</span>
       </button> */}
 
-      <div className="bg-gray-500 dark:bg-transparent size-10 rounded-full grid place-items-center">
+      <div className="bg-gray-200 dark:bg-transparent size-10 rounded-full grid place-items-center">
         <Classic
           placeholder="Toggle theme"
           onToggle={() => {
