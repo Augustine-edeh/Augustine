@@ -45,7 +45,7 @@ const Skills = ({ skillSet }: SkillsProps) => {
         <motion.p
           variants={headerVariants}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl font-bold text-gray-200 mb-6"
+          className="text-xl font-bold dark:text-gray-200 mb-6"
         >
           Skills:
         </motion.p>

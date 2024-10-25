@@ -34,22 +34,24 @@ const About = () => {
         animate={controls}
         variants={containerVariants}
         transition={{ duration: 0.6 }}
-        className="py-16 px- lg:px-32 bg-slate-900"
+        className="py-16 px- lg:px-32"
       >
         <div className="max-w-3xl mx-auto text-">
-          <p className="font-bold text-gray-400">So, who am I?</p>
+          <p className="font-bold text-gray-400 dark:text-gray-400">
+            So, who am I?
+          </p>
 
           <motion.h2
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-3xl font-bold text-gray-200 mb-6 mt-5 underline underline-offset-8 decoration-blue-500"
+            className="text-3xl font-bold dark:text-gray-200 mb-6 mt-5 underline underline-offset-8 decoration-blue-500"
           >
             About Me.
           </motion.h2>
           <motion.div
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg text-gray-300 mb-8"
+            className="text-lg dark:text-gray-300 mb-8"
           >
             <div className="flex flex-col gap-3 sm:text-justify">
               <p>
