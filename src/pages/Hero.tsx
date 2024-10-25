@@ -61,7 +61,7 @@ const Hero = () => {
       </motion.section>
 
       <section className="text-white text-center">
-        <h3 className="text-2xl bg-green-500 dark:bg-red-400">Hello, I'm</h3>
+        <h3 className="text-2xl bg-green-500 dark:bg-red-600">Hello, I'm</h3>
         <div>
           <p className="text-4xl my-5 font-extrabold">Augustine Edeh</p>
           <p className="p-0 mt-8">

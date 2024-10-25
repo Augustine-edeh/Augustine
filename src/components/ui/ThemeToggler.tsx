@@ -7,6 +7,16 @@ const ThemeToggler = () => {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+
+    return () => {};
+  }, []);
+
+  useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
