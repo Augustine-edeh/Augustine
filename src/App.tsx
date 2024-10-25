@@ -8,7 +8,7 @@ import LightUI from "./components/ui/LightUI";
 
 const App = () => {
   return (
-    <main className="bg-slate-900 relative overflow-hidden">
+    <main className="bg-[#F9FAFB] dark:bg-slate-900 relative overflow-hidden">
       <Header />
       <Hero />
       <About />

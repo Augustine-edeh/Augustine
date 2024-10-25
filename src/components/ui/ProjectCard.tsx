@@ -20,7 +20,7 @@ const ProjectCard = ({ project, index }) => {
     <li>
       <Tilt
         key={project.githubUrl}
-        className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
+        className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[calc(100vh-250px)] 
       lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
@@ -54,26 +54,29 @@ const ProjectCard = ({ project, index }) => {
 
         {/* Project text section */}
         <div
-          className={`z-10 flex flex-col h-[60%] lg:h-auto py-3 px-3 bg-slate-800/80 text-center lg:w-1/2 lg :w-[50%] ${
+          className={`z-10 flex flex-col h-[60%] lg:h-auto py-3 px-3 bg-[#FFFFF] dark:bg-slate-800/80 text-center lg:w-1/2 lg :w-[50%] ${
             index % 2 === 0 ? "lg:-ml-10" : "lg:-mr-10"
           } lg:mt-10 lg:mb-2 lg:shadow-xl overflow-scroll`}
         >
           {/* Project title */}
-          <h4 className="text-2xl font-bold uppercase mt-3 lg:mt-4">
+          <h4 className="text-2xl font- bold uppercase mt-3 lg:mt-4 text-[#1F2937] dark:text-white">
             {project.title}
           </h4>
 
-          <hr className=" border-slate- 400" />
+          <hr />
 
           {/* Project description */}
-          <p className="my-7 text-sm lg:text-lg text-gray-300">
+          <p className="my-7 text-sm lg:text-lg text-[#4B5563] dark:text-gray-300">
             {project.description}
           </p>
 
           {/* Technologies used */}
           <ul className="flex flex-wrap gap-2 justify-center">
             {project.technologiesUsed.map((technology, index) => (
-              <li key={index} className="bg-gray-700/50 px-2 py-0.5 rounded">
+              <li
+                key={index}
+                className=" text-black dark:text-white bg-slate-300 dark:bg-gray-700/50 px-2 py-0.5 rounded shadow -xl dark:shadow-none"
+              >
                 {technology}
               </li>
             ))}
@@ -85,7 +88,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline underline-offset-2 bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl px-4 py-1.5"
+              className="hover:underline underline-offset-2 text-[#FFFFFF] bg-[#3B82F6] dark:bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl px-4 py-1.5"
               aria-label={`View live preview of the ${project.title} project`}
             >
               Live Preview
@@ -95,7 +98,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline underline-offset-2 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl ring-1 ring-gray-300/50 px-4 py-1.5"
+              className="hover:underline underline-offset-2 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl ring-1 ring-[#E5E7EB] dark:ring-gray-300/50 px-4 py-1.5 text-black dark:text-white"
               aria-label={`Go to gitHub repo of the ${project.title} project`}
             >
               Check on GitHub
