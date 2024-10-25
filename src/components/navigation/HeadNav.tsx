@@ -11,7 +11,7 @@ const HeadNav = () => {
           smooth={true}
           offset={-80}
           duration={500}
-          className="text-blue-300 h-fit text-2xl cursor-pointer sm:p-2"
+          className="text-blue-300 dark:bg-red-600 h-fit text-2xl cursor-pointer sm:p-2"
         >
           {"</> Augustine"}
         </Link>
