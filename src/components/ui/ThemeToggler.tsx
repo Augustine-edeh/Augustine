@@ -1,8 +1,24 @@
 import * as Icons from "@heroicons/react/24/outline";
 import "@theme-toggles/react/css/Classic.css";
 import { Classic } from "@theme-toggles/react";
+import { useEffect, useState } from "react";
 
 const ThemeToggler = () => {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    return () => {};
+  }, [theme]);
+
+  const themeSwitchHanlder = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   // Mobile device vibration trigger function
   const triggerVibration = () => {
     if (navigator.vibrate) {
@@ -22,7 +38,10 @@ const ThemeToggler = () => {
 
       <Classic
         placeholder="Toggle theme"
-        onToggle={triggerVibration}
+        onToggle={() => {
+          triggerVibration();
+          themeSwitchHanlder();
+        }}
         className="[&_svg]:w-7 [&_svg]:h-7"
       />
     </>
