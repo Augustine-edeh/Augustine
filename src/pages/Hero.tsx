@@ -93,7 +93,7 @@ const Hero = () => {
 
           <a
             href="#contact"
-            className="text-[white] bg-[#2563EB] dark:bg-slate-700 rounded-3xl px-3 py-3.5 shadow-xl"
+            className="text-[white] bg-slate-700 rounded-3xl px-3 py-3.5 shadow-xl"
           >
             Contact me
           </a>
