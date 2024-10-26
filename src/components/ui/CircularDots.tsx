@@ -12,7 +12,10 @@ const CircularDots: React.FC<CircularDotsPropsType> = ({ numberOfDots }) => {
   return (
     <ul className="flex justify-evenly mb-32">
       {dotsArray.map((_, index) => (
-        <li key={index} className="bg-slate-800/40 h-8 w-8 rounded-full" />
+        <li
+          key={index}
+          className="bg-slate-800/10 dark:bg-slate-800/40 h-8 w-8 rounded-full"
+        />
       ))}
     </ul>
   );
