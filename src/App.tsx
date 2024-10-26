@@ -5,10 +5,10 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import LightUI from "./components/ui/LightUI";
-BottomNav;
+
 const App = () => {
   return (
-    <main className="bg-slate-900 relative overflow-hidden">
+    <main className="bg-[#F9FAFB] dark:bg-slate-900 relative overflow-hidden">
       <Header />
       <Hero />
       <About />

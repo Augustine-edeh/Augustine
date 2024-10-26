@@ -35,7 +35,7 @@ const Hero = () => {
       animate={controls}
       variants={containerVariants}
       transition={{ duration: 0.6 }}
-      className="min-h-screen flex flex-col gap-20 lg:flex-row justify-center items-center bg-slate-900 max-w-screen-lg mx-auto px-8"
+      className="min-h-screen flex flex-col gap-20 lg:flex-row justify-center items-center bg-[#F9FAFB] dark:bg-slate-900 max-w-screen-lg mx-auto px-8"
     >
       <motion.section
         ref={ref}
@@ -51,23 +51,24 @@ const Hero = () => {
         }}
         className="flex h-56 z-0"
       >
-        <div className="container h-full w-56 bg-black rounded-lg overflow-clip z-10 shadow-2xl">
+        <div className="container h-full w-56 bg-slate-900 dark:bg-black rounded-lg overflow-clip z-10 shadow-2xl">
           <picture>
             <source type="image/webp" srcSet="/profileImg.webp" />
             <img src="/profileImg.png" alt="Augustine" className="" />
           </picture>
         </div>
-        <div className="h-full w-56 h bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl"></div>
+        <div className="h-full w-56 bg-black dark:bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl" />
       </motion.section>
 
-      <section className="text-white text-center">
+      <section className="text-[#1F2937] dark:text-white  text-center">
         <h3 className="text-2xl">Hello, I'm</h3>
         <div>
           <p className="text-4xl my-5 font-extrabold">Augustine Edeh</p>
           <p className="p-0 mt-8">
-            a passionate{" "}
+            a passionate
             <span className="text-2xl md:text-3xl text-blue-400">
-              Frontend Developer{" "}
+              {" "}
+              Frontend Developer
             </span>
             {/* <span className="text-teal-500 text-2xl">
               Advancing frontend developer
@@ -92,7 +93,7 @@ const Hero = () => {
 
           <a
             href="#contact"
-            className="bg-slate-700 rounded-3xl px-3 py-3.5 shadow-xl"
+            className="text-[white] bg-slate-700 rounded-3xl px-3 py-3.5 shadow-xl"
           >
             Contact me
           </a>

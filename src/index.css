@@ -84,7 +84,7 @@ button:focus-visible {
 
   /* bottomNav active state for icons */
   .bottom-nav .active .icons {
-    @apply bg-blue-800 bg-opacity-50 px-3 py-0.5 rounded-s-2xl rounded-e-2xl;
+    @apply bg-gray-500 dark:bg-blue-800 bg-opacity-50 px-3 py-0.5 rounded-s-2xl rounded-e-2xl;
   }
 
   /* headerNav active state */
