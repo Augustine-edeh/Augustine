@@ -78,7 +78,7 @@ const ContactForm = () => {
 
       {/* Name input */}
       <div className="flex flex-col gap-y-2">
-        <label htmlFor="name" className="font-bold w-fit">
+        <label htmlFor="name" className="font-bold w-fit dark:text-white">
           Your Name
         </label>
         <input
@@ -86,14 +86,14 @@ const ContactForm = () => {
           id="name"
           name="user_name"
           placeholder="What's your name?"
-          className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
+          className="bg-white dark:bg-slate-800 dark:text-white p-4 rounded-lg outline-none border-l-4 border-white dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500 shadow-lg"
           required
         />
       </div>
 
       {/* Email input */}
       <div className="flex flex-col gap-y-2">
-        <label htmlFor="email" className="font-bold w-fit">
+        <label htmlFor="email" className="font-bold w-fit dark:text-white">
           Your Email
         </label>
         <input
@@ -102,13 +102,13 @@ const ContactForm = () => {
           name="user_email"
           placeholder="example@email.com"
           required
-          className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
+          className="bg-white dark:bg-slate-800 dark:text-white p-4 rounded-lg outline-none border-l-4 border-white dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500 shadow-lg"
         />
       </div>
 
       {/* Message textarea */}
       <div className="flex flex-col gap-y-2">
-        <label htmlFor="message" className="font-bold w-fit">
+        <label htmlFor="message" className="font-bold w-fit dark:text-white">
           Your Message
         </label>
         <textarea
@@ -117,7 +117,7 @@ const ContactForm = () => {
           rows={10}
           name="message"
           placeholder="Kindly enter your message"
-          className="bg-slate-800 text-white p-4 rounded-lg outline-none border-l-4 border-slate-800 focus:border-blue-500 shadow-lg"
+          className="bg-white dark:bg-slate-800 dark:text-white p-4 rounded-lg outline-none border-l-4 border-white dark:border-slate-800 focus:border-blue-500 dark:focus:border-blue-500 shadow-lg"
           required
         ></textarea>
       </div>
@@ -125,7 +125,7 @@ const ContactForm = () => {
       {/* Submit button */}
       <button
         type="submit"
-        className="flex justify-center items-center bg-blue-500 px-5 py-3 ml-auto w-fit font-bold rounded-lg shadow-lg"
+        className="flex justify-center items-center bg-blue-500 px-5 py-3 ml-auto w-fit font-bold rounded-lg shadow-lg text-white"
       >
         {isSending ? (
           "Sending..."
