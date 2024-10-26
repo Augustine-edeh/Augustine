@@ -53,12 +53,12 @@ const Skills = ({ skillSet }: SkillsProps) => {
         <motion.ul
           variants={headerVariants}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-2 md:flex md:flex-wrap gap-3 text-white"
+          className="grid grid-cols-2 md:flex md:flex-wrap gap-3 dark:text-white"
         >
           {skillSet &&
             skillSet.map((skill_tool) => (
               <li
-                className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg bg-slate-800 shadow-md shadow-blue-900/50"
+                className="flex md:flex-col items-center justify-center md:w-32 md:h-28 py-3 gap-2.5 rounded-lg outline outline-1 outline-slate-800 dark:bg-slate-800 shadow-md dark:shadow-blue-900/50"
                 key={skill_tool.toolName}
               >
                 {/* <motion.img
