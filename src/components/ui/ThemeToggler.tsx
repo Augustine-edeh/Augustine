@@ -4,59 +4,55 @@ import { Classic } from "@theme-toggles/react";
 import { useEffect, useState } from "react";
 
 const ThemeToggler = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(null);
 
+  // Load saved theme or system preference on initial mount
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark").matches) {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
     } else {
       setTheme("light");
     }
-
-    return () => {};
   }, []);
 
+  // Apply theme to document class and save to localStorage on change
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-
-    return () => {};
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const themeSwitchHanlder = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+  // Theme toggle handler
+  const themeSwitchHandler = () => {
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
+
   // Mobile device vibration trigger function
   const triggerVibration = () => {
     if (navigator.vibrate) {
-      // Single short vibration pulse for subtle feedback
-      navigator.vibrate(50);
+      navigator.vibrate(50); // Single short vibration pulse
     } else {
       console.log("Vibration not supported on this device.");
     }
   };
 
   return (
-    <>
-      {/* <button className="h-fit">
-        <Icons.SunIcon onClick={triggerVibration} className="text-white h-7" />
-        <span className="sr-only">Toggle Theme</span>
-      </button> */}
-
-      <div className="bg-gray-200 dark:bg-transparent size-10 rounded-full grid place-items-center">
-        <Classic
-          placeholder="Toggle theme"
-          onToggle={() => {
-            triggerVibration();
-            themeSwitchHanlder();
-          }}
-          className="[&_svg]:w-7 [&_svg]:h-7"
-        />
-      </div>
-    </>
+    <div className="bg-gray-200 dark:bg-transparent size-10 rounded-full grid place-items-center">
+      <Classic
+        placeholder="Toggle theme"
+        onToggle={() => {
+          triggerVibration();
+          themeSwitchHandler();
+        }}
+        className="[&_svg]:w-7 [&_svg]:h-7"
+      />
+    </div>
   );
 };
 
