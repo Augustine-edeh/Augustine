@@ -1,4 +1,3 @@
-import * as Icons from "@heroicons/react/24/outline";
 import "@theme-toggles/react/css/Classic.css";
 import { Classic } from "@theme-toggles/react";
 import { useEffect, useState } from "react";
