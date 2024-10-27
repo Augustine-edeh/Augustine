@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Augustine Edeh's Portfolio",
+  "short_name": "Dev Augustine",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#333333"
 }
