@@ -1,8 +1,8 @@
 const projectList = [
   {
-    title: "TechCare",
+    title: "Tech Care",
     description:
-      "A healthcare dashboard that offers easy access to patient records, medical news, and other vital healthcare information, with advanced features for patient management.",
+      "A healthcare dashboard with features like schedule management, patient tracking, transaction monitoring, and a news feed, offering a streamlined and efficient experience for managing healthcare tasks.",
     cldImg_publicId: "portfolio_project/Tech-Care_laptopView",
     githubUrl: "https://github.com/augustine-edeh/techcare",
     liveUrl: "https://techcare-247.vercel.app",
