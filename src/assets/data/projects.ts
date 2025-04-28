@@ -1,5 +1,14 @@
 const projectList = [
   {
+    title: "TechCare",
+    description:
+      "A healthcare dashboard that offers easy access to patient records, medical news, and other vital healthcare information, with advanced features for patient management.",
+    cldImg_publicId: "portfolio_project/Tech-Care_laptopView",
+    githubUrl: "https://github.com/augustine-edeh/techcare",
+    liveUrl: "https://techcare-247.vercel.app",
+    technologiesUsed: ["Next.js", "TailwindCSS", "Zustand", "Axios"],
+  },
+  {
     title: "Countries at a Glance",
     description:
       "An interactive app that retrieves and displays detailed information about countries worldwide using the Rest Countries API.",
