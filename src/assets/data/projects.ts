@@ -57,15 +57,6 @@ const projectList = [
     technologiesUsed: ["Vite", "React.js", "TailwindCSS", "Vercel"],
   },
   {
-    title: "Dynamic Calculator Web App",
-    description:
-      "A responsive calculator for basic arithmetic operations, featuring a subtle error vibration alert for mobile users (android).",
-    cldImg_publicId: "portfolio_project/Dynamic-calculator_laptopView",
-    githubUrl: "https://github.com/Augustine-edeh/Dynamic-Calculator-Web-app",
-    liveUrl: "https://augustine-edeh.github.io/Dynamic-Calculator-Web-app",
-    technologiesUsed: ["Vite", "React.js", "TailwindCSS", "Vercel"],
-  },
-  {
     title: "Gym Buddy",
     description:
       "A `featured` fitness tracking app for recording workout exercises, built with the MERN stack and designed for fitness enthusiasts.",
