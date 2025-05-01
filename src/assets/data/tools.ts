@@ -65,11 +65,6 @@ const tools = [
     alt: "Nodejs",
   },
   {
-    toolName: "Nodejs",
-    icon: "devicon:nodejs",
-    alt: "Nodejs",
-  },
-  {
     toolName: "Express",
     icon: "skill-icons:expressjs-light",
     alt: "Express",
