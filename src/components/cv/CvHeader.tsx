@@ -1,13 +1,10 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons/faChevronLeft";
-import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
 const CvHeader = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +35,7 @@ const CvHeader = () => {
     <header className="w-full max-w-5xl mb-4 flex justify-between items-center bg-slate-800 px-4 py-2 rounded-md relative">
       {/* Back Button */}
       <button
-        onClick={() => router.push("/")}
+        onClick={() => navigate("/")}
         className="flex items-center gap-1 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all cursor-pointer"
         title="Back to Home"
       >
