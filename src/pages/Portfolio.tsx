@@ -6,7 +6,7 @@ import BottomNav from "../components/navigation/BottomNav";
 import Header from "../components/ui/Header";
 import LightUI from "../components/ui/LightUI";
 
-const Main = () => {
+const Portfolio = () => {
   return (
     <main className="bg-[#F9FAFB] dark:bg-slate-900 relative overflow-hidden">
       <Header />
@@ -20,4 +20,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Portfolio;

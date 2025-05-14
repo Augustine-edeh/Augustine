@@ -16,6 +16,8 @@ const ContactForm = () => {
 
   const form = useRef<HTMLFormElement | null>(null);
 
+  console.log(import.meta.env);
+
   const notify = {
     success: () =>
       toast.success("Message sent!", {
