@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index }) => {
         </p>
 
         {/* Technologies used */}
-        <ul className="flex flex-wrap gap-2 justify-center mt-1 lg:mt-5">
+        <ul className="flex flex-wrap gap-2 justify-center mt-5 lg:mt-1">
           {project.technologiesUsed.map((technology, index) => (
             <li
               key={index}
