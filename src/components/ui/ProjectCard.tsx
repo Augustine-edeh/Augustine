@@ -4,8 +4,8 @@ import { AdvancedImage } from "@cloudinary/react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useState } from "react";
-import { auto } from "@cloudinary/url-gen/actions/resize";
-import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
+// import { auto } from "@cloudinary/url-gen/actions/resize";
+// import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 
 const ProjectCard = ({ project, index }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,12 +18,11 @@ const ProjectCard = ({ project, index }) => {
     },
   });
   // Prepare optimized Cloudinary image
-  const optimizedImg = cld
-    .image(project.cldImg_publicId)
-    .format("auto")
-    .quality("auto")
-    .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
-  // .resize((resize) => resize.scale().width(800));
+  // const optimizedImg = cld
+  //   .image(project.cldImg_publicId)
+  //   .format("auto")
+  //   .quality("auto")
+  //   .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
 
   return (
     <Tilt
