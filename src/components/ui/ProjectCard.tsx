@@ -4,21 +4,28 @@ import { AdvancedImage } from "@cloudinary/react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useState } from "react";
-
-// Cloudinary Image instance setup
-const cld = new Cloudinary({
-  cloud: {
-    cloudName: import.meta.env.VITE_CLOUD_NAME,
-  },
-});
+// import { auto } from "@cloudinary/url-gen/actions/resize";
+// import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 
 const ProjectCard = ({ project, index }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
+  // Cloudinary Image instance setup
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: import.meta.env.VITE_CLOUD_NAME,
+    },
+  });
+  // Prepare optimized Cloudinary image
+  // const optimizedImg = cld
+  //   .image(project.cldImg_publicId)
+  //   .format("auto")
+  //   .quality("auto")
+  //   .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
+
   return (
     <Tilt
-      key={project.githubUrl}
       className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[37rem] lg:h-96 lg:max-w-7xl lg:shadow-none ${
         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
@@ -32,9 +39,10 @@ const ProjectCard = ({ project, index }) => {
         {!hasError && (
           <AdvancedImage
             cldImg={cld.image(`${project.cldImg_publicId}`)}
+            // cldImg={optimizedImg}
             className="h-full w-full"
             alt={project.title}
-            loading="lazy"
+            // loading="lazy"
             onLoad={() => setIsLoading(false)}
             onError={() => {
               setIsLoading(false); // Stop showing skeleton
@@ -98,7 +106,7 @@ const ProjectCard = ({ project, index }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline focus:underline underline-offset-2 focus:outline-1 outline-offset-2 rounded-2xl ring-1 ring-[#E5E7EB] dark:ring-gray-300/50 px-4 py-1.5 text-black dark:text-white"
-            aria-label={`Go to gitHub repo of the ${project.title} project`}
+            aria-label={`Go to GitHub repo of the ${project.title} project`}
           >
             GitHub
           </a>
