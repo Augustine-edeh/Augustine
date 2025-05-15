@@ -19,7 +19,7 @@ const ProjectCard = ({ project, index }) => {
   return (
     <Tilt
       key={project.githubUrl}
-      className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[37rem] lg:h-[calc(100vh/2.1)] lg:max-w-7xl lg:shadow-none ${
+      className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[37rem] lg:h-96 lg:max-w-7xl lg:shadow-none ${
         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
     >
