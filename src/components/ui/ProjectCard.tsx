@@ -18,7 +18,6 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <Tilt
-      key={project.githubUrl}
       className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[37rem] lg:h-96 lg:max-w-7xl lg:shadow-none ${
         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
@@ -98,7 +97,7 @@ const ProjectCard = ({ project, index }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline focus:underline underline-offset-2 focus:outline-1 outline-offset-2 rounded-2xl ring-1 ring-[#E5E7EB] dark:ring-gray-300/50 px-4 py-1.5 text-black dark:text-white"
-            aria-label={`Go to gitHub repo of the ${project.title} project`}
+            aria-label={`Go to GitHub repo of the ${project.title} project`}
           >
             GitHub
           </a>
