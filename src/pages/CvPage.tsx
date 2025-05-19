@@ -4,9 +4,6 @@ const CVPage = () => {
   const cvLink =
     "https://docs.google.com/document/d/1hVEjMe3XtP3ButrVE1O6zT_RvLDG3Co3qczkB_7KTuE/edit?usp=sharing";
 
-  const downloadLink =
-    "https://docs.google.com/document/d/1hVEjMe3XtP3ButrVE1O6zT_RvLDG3Co3qczkB_7KTuE/export?format=pdf";
-
   return (
     <div className="min-h-screen bg-slate-900 px-4 py-6 flex flex-col items-center">
       <CvHeader />
@@ -19,10 +16,8 @@ const CVPage = () => {
         </p>
 
         <a
-          href={downloadLink}
+          href="/Augustine Edeh – Frontend Developer.pdf"
           download
-          target="_blank"
-          rel="noopener noreferrer"
           className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition duration-300"
         >
           Download CV (PDF)
