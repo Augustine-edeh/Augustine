@@ -12,8 +12,8 @@ const CVPage = () => {
       <CvHeader />
 
       {/* Mobile message */}
-      <div className="block lg:hidden mt-10 text-center text-gray-300 max-w-md">
-        <p className="text-lg mb-4">
+      <div className="flex-1 flex flex-col gap-5 justify-center items-center lg:hidden text-center text-gray-300 max-w-md">
+        <p className="text-lg">
           For a better viewing experience, please use a larger screen or
           download the CV below.
         </p>
@@ -23,7 +23,7 @@ const CVPage = () => {
           download
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition duration-300"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition duration-300"
         >
           Download CV (PDF)
         </a>
