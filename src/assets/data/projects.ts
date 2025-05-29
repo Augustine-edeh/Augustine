@@ -1,5 +1,23 @@
 const projectList = [
   {
+    title: "Elegant Salon",
+    description:
+      " A modern salon website with online appointment booking and an admin dashboard for managing bookings — built to elevate client experience and streamline salon operations.",
+    cldImg_publicId: "portfolio_project/Elegant-Salon_laptopView",
+    githubUrl: "https://github.com/Augustine-edeh/Elegant-Salon",
+    liveUrl: "https://elegant-salons.vercel.app",
+    technologiesUsed: ["Next.js", "TailwindCSS", "Shadcn", "Supabase"],
+  },
+  {
+    title: "Fruitstatic Edibles",
+    description:
+      "A vibrant website for a creative SME offering fruit platters, smoothies, and event planning - blending e-commerce with service showcase ",
+    cldImg_publicId: "portfolio_project/Fruitastic-Edibles_laptopView",
+    githubUrl: "https://github.com/Augustine-edeh/fruitstatic-edibles",
+    liveUrl: "https://fruitstatic-edibles.vercel.app",
+    technologiesUsed: ["Next.js", "TailwindCSS", "Zustand"],
+  },
+  {
     title: "Tech Care",
     description:
       "A healthcare dashboard with features like schedule management, patient tracking, transaction monitoring, and a news feed, offering a streamlined and efficient experience for managing healthcare tasks.",
