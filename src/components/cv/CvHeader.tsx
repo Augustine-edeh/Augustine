@@ -44,9 +44,7 @@ const CvHeader = () => {
       </button>
 
       {/* Title */}
-      <h1 className="text-xl font-semibold text-gray-100 text-center">
-        My CV (Google Docs Preview)
-      </h1>
+      <h1 className="text-xl font-semibold text-gray-100 text-center">My CV</h1>
 
       {/* Desktop: Download button */}
       <div className="hidden md:flex">
@@ -72,7 +70,7 @@ const CvHeader = () => {
         {showMenu && (
           <div className="absolute right-0 mt-2 bg-slate-700 text-white rounded shadow-md z-10">
             <a
-              href="/Augustine Edeh_CV.pdf"
+              href="/Augustine Edeh – Frontend Developer.pdf"
               download
               className="block px-4 py-2 bg-blue-700 rounded hover:bg-blue-800 transition-all text-center"
               onClick={() => setShowMenu(false)} // auto-close on click
