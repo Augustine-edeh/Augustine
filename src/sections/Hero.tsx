@@ -61,7 +61,7 @@ const Hero = () => {
       </motion.section>
 
       <section className="text-[#1F2937] dark:text-white  text-center">
-        <h3 className="text-2xl">Hello, I'm</h3>
+        {/* <h3 className="text-2xl">Hello, I'm</h3>
         <div>
           <p className="text-4xl my-5 font-extrabold">Augustine Edeh</p>
           <p className="p-0 mt-8">
@@ -69,19 +69,28 @@ const Hero = () => {
             <span className="text-2xl md:text-3xl text-blue-400">
               {" "}
               Frontend Developer
-            </span>
-            {/* <span className="text-teal-500 text-2xl">
+            </span> */}
+        {/* NOTE: the below section was already commented out long before now */}
+        {/* <span className="text-teal-500 text-2xl">
               Advancing frontend developer
             </span>{" "} */}
-            {/* & a
+        {/* & a
             <span className="text-teal-500/80 text-lg">
               {" "}
               fullstack developer
             </span>{" "}
             in the making (self tught) */}
-          </p>
-        </div>
-
+        {/* NOTE: ends here!! */}
+        {/* </p> */}
+        {/* </div> */}
+        <p className="text-3xl md:text-4xl font-extrabold leading-snug">
+          Hi, I’m{" "}
+        </p>
+        <span className="text-blue-500">Augustine Edeh</span> —
+        <br className="hidden md:block" />
+        a frontend developer crafting fast, elegant, and
+        <br className="hidden md:block" />
+        conversion-driven web experiences that leave a lasting impression.
         <div className="flex mx-auto gap-x-5 w-fit my-10">
           <a
             href="/Augustine Edeh – Frontend Developer.pdf"
@@ -98,7 +107,6 @@ const Hero = () => {
             Contact me
           </a>
         </div>
-
         <div className="flex justify-center gap-x-5">
           <a
             href="https://www.linkedin.com/in/augustine-edeh/"
