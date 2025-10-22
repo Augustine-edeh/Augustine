@@ -68,14 +68,14 @@ const CvHeader = () => {
         </button>
 
         {showMenu && (
-          <div className="absolute right-0 mt-2 bg-slate-700 text-white rounded shadow-md z-10">
+          <div className="absolute right-0 bg-slate-700 text-white rounded shadow-md z-10">
             <a
-              href="/Augustine Edeh – Frontend Developer.pdf"
-              download
+              href="/CV (Revamped Version).pdf"
+              download="Augustine Edeh – Frontend_Developer"
               className="block px-4 py-2 bg-blue-700 rounded hover:bg-blue-800 transition-all text-center"
               onClick={() => setShowMenu(false)} // auto-close on click
             >
-              Download PDF
+              Download CV
             </a>
           </div>
         )}
