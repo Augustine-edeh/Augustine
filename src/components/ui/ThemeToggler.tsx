@@ -29,7 +29,7 @@ const ThemeToggler = () => {
 
   // Theme toggle handler
   const themeSwitchHandler = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    setTheme((prevTheme: string) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
   // Mobile device vibration trigger function

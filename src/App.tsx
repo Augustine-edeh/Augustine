@@ -1,22 +1,31 @@
-import Header from "./components/ui/Header";
-import Hero from "./pages/Hero";
-import BottomNav from "./components/navigation/BottomNav";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import LightUI from "./components/ui/LightUI";
+import { useEffect } from "react";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Portfolio from "./pages/Portfolio";
+import CVPage from "./pages/CvPage";
+
+import Lenis from "lenis";
 
 const App = () => {
+  // Lenis Logic
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    <main className="bg-[#F9FAFB] dark:bg-slate-900 relative overflow-hidden">
-      <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      <BottomNav />
-      <LightUI />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/cv" element={<CVPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

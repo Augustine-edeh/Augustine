@@ -51,7 +51,7 @@ const Hero = () => {
         }}
         className="flex h-56 z-0"
       >
-        <div className="container h-full w-56 bg-slate-900 dark:bg-black rounded-lg overflow-clip z-10 shadow-2xl">
+        <div className="container h-full w-56 bg-slate-900 dark:bg-black rounded-lg overflow-clip z-10 shadow-2xl transition-all duration-300 hover:scale-105">
           <picture>
             <source type="image/webp" srcSet="/profileImg.webp" />
             <img src="/profileImg.png" alt="Augustine" className="" />
@@ -84,9 +84,9 @@ const Hero = () => {
 
         <div className="flex mx-auto gap-x-5 w-fit my-10">
           <a
-            href="/Augustine_edeh-CV.pdf"
+            href="/Augustine Edeh.pdf"
             className="grid place-items-center outline outline-1 rounded-3xl px-2 py-2 focus:bg-gray-50 focus:text-slate-900"
-            download
+            download="Augustine Edeh – Frontend_Developer"
           >
             Download CV
           </a>

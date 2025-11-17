@@ -55,9 +55,9 @@ const tools = [
     alt: "Typescript",
   },
   {
-    toolName: "Next.js",
-    icon: "devicon:nextjs",
-    alt: "Next.js",
+    toolName: "Postman",
+    icon: "skill-icons:postman",
+    alt: "Postman",
   },
   {
     toolName: "Nodejs",
