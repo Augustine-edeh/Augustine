@@ -84,7 +84,7 @@ const Hero = () => {
 
         <div className="flex mx-auto gap-x-5 w-fit my-10">
           <a
-            href="/CV (Revamped Version).pdf"
+            href="/Augustine Edeh.pdf"
             className="grid place-items-center outline outline-1 rounded-3xl px-2 py-2 focus:bg-gray-50 focus:text-slate-900"
             download="Augustine Edeh – Frontend_Developer"
           >

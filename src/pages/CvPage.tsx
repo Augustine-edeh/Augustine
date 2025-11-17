@@ -5,7 +5,7 @@ import CvHeader from "../components/cv/CvHeader";
 
 const CVPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const cvFile = "/CV (Revamped Version).pdf";
+  const cvFile = "/Augustine Edeh.pdf";
 
   return (
     <div className="min-h-screen bg-slate-900 px-4 py-6 flex flex-col items-center">

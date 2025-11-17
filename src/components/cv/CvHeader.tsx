@@ -49,7 +49,7 @@ const CvHeader = () => {
       {/* Desktop: Download button */}
       <div className="hidden md:flex">
         <a
-          href="/Augustine Edeh_CV.pdf"
+          href="/Augustine Edeh.pdf"
           download
           className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition-all text-center"
         >
@@ -70,8 +70,8 @@ const CvHeader = () => {
         {showMenu && (
           <div className="absolute right-0 bg-slate-700 text-white rounded shadow-md z-10">
             <a
-              href="/CV (Revamped Version).pdf"
-              download="Augustine Edeh – Frontend_Developer"
+              href="/Augustine Edeh.pdf"
+              // download="Augustine Edeh – Frontend_Developer"
               className="block px-4 py-2 bg-blue-700 rounded hover:bg-blue-800 transition-all text-center"
               onClick={() => setShowMenu(false)} // auto-close on click
             >
