@@ -8,7 +8,7 @@ const Logo = () => {
       smooth={true}
       offset={-80}
       duration={500}
-      className="text-black dark:text-blue-300 h-fit text-2xl cursor-pointer sm:p-2"
+      className="text-black dark:text-blue-300 h-fit text-2xl cursor-pointer sm:p-2 transition-all duration-1000"
     >
       {"</> Augustine"}
     </Link>

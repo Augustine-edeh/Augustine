@@ -42,7 +42,7 @@ const ThemeToggler = () => {
   };
 
   return (
-    <div className="bg-gray-200 dark:bg-transparent size-10 rounded-full grid place-items-center">
+    <div className="bg-gray-200 dark:bg-transparent size-10 rounded-full grid place-items-center transition-all duration-1000">
       <Classic
         placeholder="Toggle theme"
         onToggle={() => {

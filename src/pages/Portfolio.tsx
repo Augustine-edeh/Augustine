@@ -8,7 +8,7 @@ import LightUI from "../components/ui/LightUI";
 
 const Portfolio = () => {
   return (
-    <main className="bg-[#F9FAFB] dark:bg-slate-900 relative overflow-hidden">
+    <main className="bg-[#F9FAFB] dark:bg-slate-900 relative overflow-hidden transition-all duration-1000">
       <Header />
       <Hero />
       <About />

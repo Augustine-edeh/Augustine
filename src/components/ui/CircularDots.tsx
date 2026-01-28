@@ -14,7 +14,7 @@ const CircularDots: React.FC<CircularDotsPropsType> = ({ numberOfDots }) => {
       {dotsArray.map((_, index) => (
         <li
           key={index}
-          className="bg-slate-800/10 dark:bg-slate-800/40 h-8 w-8 rounded-full"
+          className="bg-slate-800/10 dark:bg-slate-800/40 h-8 w-8 rounded-full transition-all duration-1000"
         />
       ))}
     </ul>

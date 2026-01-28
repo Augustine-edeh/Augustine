@@ -37,21 +37,21 @@ const About = () => {
         className="py-16 px- lg:px-32"
       >
         <div className="max-w-3xl mx-auto text-">
-          <p className="font-bold text-gray-400 dark:text-gray-400">
+          <p className="font-bold text-gray-400 dark:text-gray-400 transition-all duration-1000">
             So, who am I?
           </p>
 
           <motion.h2
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-3xl font-bold dark:text-gray-200 mb-6 mt-5 underline underline-offset-8 decoration-blue-500"
+            className="text-3xl font-bold dark:text-gray-200 mb-6 mt-5 underline underline-offset-8 decoration-blue-500 transition-all duration-1000"
           >
             About Me.
           </motion.h2>
           <motion.div
             variants={headerVariants}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg dark:text-gray-300 mb-8"
+            className="text-lg dark:text-gray-300 mb-8 transition-all duration-1000"
           >
             <div className="flex flex-col gap-3 sm:text-justify">
               <p>

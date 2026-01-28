@@ -35,7 +35,7 @@ const Hero = () => {
       animate={controls}
       variants={containerVariants}
       transition={{ duration: 0.6 }}
-      className="min-h-screen flex flex-col gap-20 lg:flex-row justify-center items-center bg-[#F9FAFB] dark:bg-slate-900 max-w-screen-lg mx-auto px-8"
+      className="min-h-screen flex flex-col gap-20 lg:flex-row justify-center items-center bg-[#F9FAFB] dark:bg-slate-900 max-w-screen-lg mx-auto px-8 transition-all duration-1000"
     >
       <motion.section
         ref={ref}
@@ -57,10 +57,10 @@ const Hero = () => {
             <img src="/profileImg.png" alt="Augustine" className="" />
           </picture>
         </div>
-        <div className="h-full w-56 bg-black dark:bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl" />
+        <div className="h-full w-56 bg-black dark:bg-slate-800 rounded-lg -ml-44 mt-8 shadow-xl transition-all duration-1000" />
       </motion.section>
 
-      <section className="text-[#1F2937] dark:text-white  text-center">
+      <section className="text-[#1F2937] dark:text-white text-center transition-all duration-1000">
         <h3 className="text-2xl">Hello, I'm</h3>
         <div>
           <p className="text-4xl my-5 font-extrabold">Augustine Edeh</p>

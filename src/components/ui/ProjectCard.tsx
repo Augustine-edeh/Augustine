@@ -26,7 +26,7 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <Tilt
-      className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[37rem] lg:h-96 lg:max-w-7xl lg:shadow-none ${
+      className={`flex flex-col rounded-2xl lg:rounded-none overflow-hidden ring-2 ring-[#E5E7EB] dark:ring-blue-900 lg:ring-0 shadow-2xl max-w-96 h-[37rem] lg:h-96 lg:max-w-7xl lg:shadow-none transition-all duration-1000 ${
         index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
     >
@@ -60,12 +60,12 @@ const ProjectCard = ({ project, index }) => {
 
       {/* Project text section */}
       <div
-        className={`h-3/5 z-10 flex flex-col lg:h-auto py-3 px-3 bg-[#FFFF] dark:bg-slate-800/80 text-center w-full lg:w-1/2 ${
+        className={`h-3/5 z-10 flex flex-col lg:h-auto py-3 px-3 bg-[#FFFF] dark:bg-slate-800/80 text-center w-full lg:w-1/2 transition-all duration-1000 ${
           index % 2 === 0 ? "lg:-ml-10" : "lg:-mr-10"
         } lg:mt-10 lg:mb-2 lg:shadow-xl overflow-auto`}
       >
         {/* Project title */}
-        <h4 className="text-xl lg:text-2xl font-bold uppercase text-[#1F2937] dark:text-white">
+        <h4 className="text-xl lg:text-2xl font-bold uppercase text-[#1F2937] dark:text-white transition-all duration-1000">
           {project.title}
         </h4>
 
@@ -73,7 +73,7 @@ const ProjectCard = ({ project, index }) => {
 
         {/* Project description */}
         {/* NOTE: check to prolly reduce text size to 'sm' on mobile instead of 'base' */}
-        <p className="my-3 lg:my-5 text-base lg:text-lg text-[#4B5563] dark:text-gray-300">
+        <p className="my-3 lg:my-5 text-base lg:text-lg text-[#4B5563] dark:text-gray-300 transition-all duration-1000">
           {project.description}
         </p>
 
@@ -82,7 +82,7 @@ const ProjectCard = ({ project, index }) => {
           {project.technologiesUsed.map((technology, index) => (
             <li
               key={index}
-              className="text-black dark:text-white bg-slate-300 dark:bg-gray-700/50 px-2 py-0.5 rounded shadow- xl dark:shadow- none"
+              className="text-black dark:text-white bg-slate-300 dark:bg-gray-700/50 px-2 py-0.5 rounded shadow- xl dark:shadow- none transition-all duration-1000"
             >
               {technology}
             </li>
@@ -95,7 +95,7 @@ const ProjectCard = ({ project, index }) => {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline focus:underline underline-offset-2 text-[#FFFFFF] bg-[#3B82F6] dark:bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl px-4 py-1.5"
+            className="hover:underline focus:underline underline-offset-2 text-[#FFFFFF] bg-[#3B82F6] dark:bg-blue-700 hover:bg-blue-600 focus:bg-blue-800 focus:outline-1 outline-offset-2 outline-transparent rounded-2xl px-4 py-1.5 transition-all duration-1000"
             aria-label={`View live preview of the ${project.title} project`}
           >
             Live Preview
@@ -105,7 +105,7 @@ const ProjectCard = ({ project, index }) => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline focus:underline underline-offset-2 focus:outline-1 outline-offset-2 rounded-2xl ring-1 ring-[#E5E7EB] dark:ring-gray-300/50 px-4 py-1.5 text-black dark:text-white"
+            className="hover:underline focus:underline underline-offset-2 focus:outline-1 outline-offset-2 rounded-2xl ring-1 ring-[#E5E7EB] dark:ring-gray-300/50 px-4 py-1.5 text-black dark:text-white transition-all duration-1000"
             aria-label={`Go to GitHub repo of the ${project.title} project`}
           >
             GitHub
